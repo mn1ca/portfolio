@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+
+body {
+   background-color:#fceadc;
+    
+    /**font defaults**/
+    font-family: "Kosugi Maru";
+    font-size: 18px;
+    color: #c1331c;
+    overflow: auto;
+    
+    cursor: url('img/site/fish-cursor.png'), pointer;
+    
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+b {
+  font-size: 16px;
+    font-weight: 1000;
+}
+
+a {
+    color: #c1331c;
+    text-decoration: none;
+    
+    cursor:  url('img/site/fish-cursor2.png'), pointer;  
+}
+
+a[href*="//"]:not([href*="https://mn1ca.neocities.org"]) {
+    border-bottom: 1px dashed #c1331c;
+}
+
+h1 {
+    font-size: 36px;
+    font-family: "Kosugi Maru";
+    text-align: center;
+    
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+#wrapper {
+    width:100%;
+    height:100%; 
+    margin: 0 auto;
+    position: relative;
+}
+
+#title {
+    width: 1280px;
+    position: absolute;
+    z-index: 3;
+    
+    pointer-events: none;
+    
+    top: -100px;
+}
+
+#title img {
+    width: 1280px;
+    object-fit: cover;
+}
+
+
+#bg {
+    
+    height: 550px;
+    width: 1280px;
+    
+    position: absolute;
+    top: 20px;
+    
+    z-index: 1;
+    
+    overflow-y: scroll;
+}
+
+#bg img {
+    width: 1050px;
+    object-fit: cover;
+    
+    filter: brightness(1.05);
+}
+
+#subtitle {
+    width: 1280px;
+    position: relative;
+    top: 480px;
+    
+    z-index: 4;
+}
+
+#sub-menu {
+    position: absolute;
+    left: 700px;
+    
+    font-size: 30px;
+}
+
+#button {
+    position: absolute;
+    transform: scale(1.25);
+    left: 150px;
+
+}
+
+#menu {
+    width: 1100px;
+    
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+    
+    height: 20%;
+    
+    margin: 10px;
+    padding: 0% 5% 0% 0%;
+    
+    font-size: 36px;
+}
+
+#menu img {
+    height: 100%;
+    margin-right: -150px;
+}
+
+#time {
+    margin-top: -20px;
+    border-bottom: 0px;
+    
+    position: absolute;
+    right: 50px;
+}
+
+#gallery {
+    
+    position: relative;
+    
+    width: 1100px;
+    margin: 10px;
+    
+    justify-content: space-between;
+    display: inline-flex;
+}
+
+.column {
+    width: 250px;
+    height: auto;
+    margin-top:10px;
+
+    display: inline-block;
+    text-align: center;
+}
+
+.thumb {
+    width: 250px;
+    height:auto;
+    flex-shrink: 0;
+    
+    margin-bottom:15px;
+    
+    padding-bottom: 15px;
+    
+    border:1px solid #c1331c;
+    background-color: #ffffff;
+    
+    display: inline-block;
+    text-align: center;
+    
+    cursor:  url('img/site/fish-cursor2.png'), pointer;
+}
+
+.thumb img {
+    width: 250px;
+    
+    object-fit: cover;
+    
+    margin-bottom: 10px;
+}
+
+.thumb:hover {
+    transform: scale(102%);
+    transition-duration:0.4s;
+}
+
+
+#clay-gallery {
+    
+    position: relative;
+    
+    width: 1100px;
+    margin: 10px;
+    padding: 5px;
+    
+    display: inline-flex;
+    align-items: flex-start;
+}
+
+.clay-thumb {
+    width: 250px;
+    flex-shrink: 0;
+    
+    margin-bottom:15px;
+    
+    padding: 10px;
+    
+    display: inline-block;
+    text-align: center;
+    
+    cursor:  url('img/site/fish-cursor2.png'), pointer;
+}
+
+.clay-thumb img {
+    width: 200px;
+    
+    object-fit: cover;
+    
+    margin-bottom: 10px;
+}
+
+.clay-thumb:hover img {
+    transform: scale(102%);
+    transition-duration:0.4s;
+}
+
+#zoom {
+    display: none;
+}
+
+#shadow {
+    width: 100%;
+    height: 100%;
+    
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    
+    
+    background-color: rgba(0,0,0, 0.8);
+    z-index: 3;   
+}
+
+.arrow-menu {
+    font-family: "Kosugi Maru";
+    font-size: 24px;
+    
+    margin-top: 10px;
+}
+
+.arrows {
+    margin-top: 10px;
+    font-size: 30;
+    
+    display: inline-flex;
+    
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.arrows:hover {
+    color: #fcc2b8;
+}
+
+.content {
+    z-index: 4;
+    justify-content: center;
+    
+    position: fixed;
+    transform: translate(-50%, -115%);
+    
+    display: none;
+    height: auto;
+}
+
+.content img {
+    max-height: 675px;
+    max-width: 900px;
+    object-fit: contain;
+}
+
+.caption {
+    width:200px;  
+    background-color: white;
+    
+    z-index: 4;
+    
+    margin-left: 20px;
+    padding: 20px;
+    padding-bottom: 60px;
+    
+    align-self: flex-start;
+    
+    font-family: "Plus Jakarta Sans";
+    line-height: 1.15;
+    
+    -webkit-user-select: text; /* Safari */
+    -ms-user-select: text; /* IE 10 and IE 11 */
+    user-select: text; /* Standard syntax */
+}
+
+/* width */
+::-webkit-scrollbar {
+    display: none;
+}
+
+::selection {
+    border: 1px dashed #fcc2b8;
+    background-color: #fcc2b8;
+}
