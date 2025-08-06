@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    --red: #c1331c;
+    --bg: #fceadc;
+}
+
+
+body {
+   background-color:var(--bg);
+
+    /**font defaults**/
+    font-family: "Kosugi Maru";
+    font-size: 18px;
+    color: var(--red);
+    overflow: auto;
+
+    cursor: url('../img/site/cursor/fish.png'), pointer;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+b {
+    font-weight: 1800;
+    text-transform: uppercase;
+    font-size: 85%;
+}
+
+p {
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.65;
+
+    -webkit-user-select: text; /* Safari */
+    -ms-user-select: text; /* IE 10 and IE 11 */
+    user-select: text; /* Standard syntax */
+}
+
+a {
+    color: var(--red);
+    text-decoration: none;
+
+    cursor:  url('../img/site/cursor/fish2.png'), pointer;
+}
+
+a[href*="//"]:not([href*="https://mn1ca.neocities.org"]) {
+    border-bottom: 1px dashed var(--red);
+}
+
+::selection {
+    background-color: var(--red);
+    color: white;
+}
+
+#wrapper {
+    width:100%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+#main {
+    width: 400px;
+    z-index: 0;
+
+    pointer-events: none;
+    margin: 30px 0px 10px;
+
+    content: url('../img/404/fished.png');
+}
+
+#cat {
+    width: 70px;
+    content: url('../img/404/404cat.png');
+
+    position: relative;
+
+    top: 145px;
+    z-index: 2;
+}
+
+#dialogue {
+    -webkit-user-select: text; /* Safari */
+    -ms-user-select: text; /* IE 10 and IE 11 */
+    user-select: text; /* Standard syntax */
+}
+
+#text-bubble {
+    width: 330px;
+    height: 100px;
+    padding: 0px 30px 20px;
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 20px;
+
+    font-family: League Spartan;
+    line-height: 125%;
+    text-align: left;
+
+    display: inline-block;
+}
+
+#bubble-title {
+    border: 1px solid var(--red);
+    border-radius: 2px;
+    background-color: var(--bg);
+    position: relative;
+
+    width: 80px;
+    padding: 10px;
+
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-family: League Spartan;
+
+    top: -15px;
+    left: -40px;
+    z-index: 3;
+
+    transform: rotate(-5deg);
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+#choices {
+    font-size: 20px;
+    line-height: 130%;
+    margin-left: 10px;
+    text-align: left;
+    display: inline-block;
+
+    width: 350px;
+    height: 80px;
+}
+
+.choice:hover {
+    cursor: url('../img/site/cursor/fish2.png'), pointer;
+}
+
+.choice::before {
+    content: "\00a0\00a0";
+}
+
+.choice:hover::before {
+    content: '> ';
+}

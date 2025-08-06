@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>mn1ca</title>
+        <link href="/css/gallery.css" rel="stylesheet" type="text/css" media="all">
+
+        <!-- masonry gallery imports -->
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+        <!-- load menu -->
+        <script src='/script/menu.js'></script>
+
+        <!-- load gallery -->
+        <script type='module' src='/script/gallery.js'></script>
+
+        <!-- favicon -->
+        <link rel="icon" type="image/x-icon" href="/img/site/favicon.png">
+
+    </head>
+
+    <div id='working-year' style='display: none'>2025</div>
+
+    <body>
+
+        <div id='menu'></div>
+        <div id='mini-menu'></div>
+        <div class="grid"></div>
+
+        <div id='zoom'>
+            <div id='content'></div>
+            <div id='closeout' onclick='document.getElementById("zoom").style.display = "none"; document.body.style.overflow = "auto"'></div>
+            <div id='shadow' onclick='document.getElementById("zoom").style.display = "none"; document.body.style.overflow = "auto"'></div>
+        </div>
+
+    </body>
+</html>

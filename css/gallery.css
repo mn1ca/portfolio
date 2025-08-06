@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    --red: #c1331c;
+    --bg: #fceadc;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color:var(--bg);
+
+    font-family: Kosugi Maru;
+    font-size: 16px;
+    font-weight: 450;
+    color: var(--red);
+    overflow-y: scroll;
+
+    cursor: url('../img/site/cursor/fish.png'), pointer;
+}
+
+b {
+    font-size: 85%;
+    font-weight: 1000;
+    font-family: Kosugi Maru;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+a {
+    color: var(--red);
+    text-decoration: none;
+
+    cursor:  url('../img/site/cursor/fish2.png'), pointer;
+}
+
+a[href*="//"]:not([href*="https://mn1ca.neocities.org"]) {
+    text-decoration: underline;
+}
+
+a:hover {
+    filter: brightness(1.5);
+    cursor: url('../img/site/cursor/fish2.png'), pointer;
+}
+
+h1 {
+    font-size: 35px;
+    font-family: "Kosugi Maru";
+    text-align: center;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+
+img {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+::selection {
+    background-color: #fcc2b8;
+}
+
+/* ---- MENU ---- */
+
+#menu {
+    width: 85%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 200px;
+    margin: auto;
+
+    font-size: 35px;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+#menu-img {
+    width: 200px;
+    margin-right: -5vw;
+    content: url('../img/site/mn1ca.png');
+}
+
+#mini-menu {
+    display: none;
+}
+
+/* ---- DROPDOWN ---- */
+summary {
+    list-style: none;
+    cursor: url('/img/site/cursor/fish2.png'), pointer;
+}
+
+summary:hover {
+    filter: brightness(1.5);
+}
+
+#dropdown {
+    position: absolute;
+    border-left: 5px solid var(--red);
+    font-size: 20px;
+    width: 125px;
+    margin-left: 5px;
+    margin-top: 15px;
+    padding: 10px 20px;
+
+    z-index: 3;
+    background-color: white;
+}
+
+.choice {
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+.choice:hover {
+    background-color: #fcc2b8;
+}
+
+
+
+
+/* ---- GRID ---- */
+
+.grid {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+    display: block;
+    float: left;
+    width: 33%;
+    padding: 10px;
+
+}
+
+.grid-item:hover {
+    transform: scale(1.025) rotate(-2deg);
+    transition-duration: 0.5s;
+
+    cursor: url('../img/site/cursor/fish2.png'), pointer;
+}
+
+.grid-item img {
+    width: 100%;
+    background: white;
+
+    border: 1px solid var(--red);
+    border-bottom: 0px;
+}
+
+.title {
+    background-color: white;
+    padding: 15px 10px;
+    text-align: center;
+
+    border: 1px solid var(--red);
+    border-top: 0px;
+}
+
+/* ---- HIDDEN ---- */
+
+#zoom {
+    display: none;
+}
+
+#shadow {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+
+    background-color: rgba(0,0,0, 0.8);
+    z-index: 3;
+}
+
+#arrow-menu {
+    font-family: "Kosugi Maru";
+    font-size: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+    padding: 0px 30px;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+#date {
+    border-bottom: 2px solid var(--red);
+    margin: 10px;
+    padding-bottom: 15px;
+}
+
+.arrows {
+    font-size: 30px;
+}
+
+.arrows:hover {
+    color: #fcc2b8;
+}
+
+#left-arrow::after {
+    content: "◂";
+}
+
+#right-arrow::after {
+    content: "▸";
+}
+
+#content {
+    z-index: 4;
+    justify-content: center;
+
+    position: fixed;
+    left: 0;
+    top: 10vh;
+    right: 0;
+    margin: auto;
+
+    pointer-events: none;
+
+    display: flex;
+}
+
+#content img {
+    display: inline-block;
+    margin: auto;
+    max-width: 75vw;
+    max-height: 85vh;
+    object-fit: contain;
+
+    pointer-events: auto;
+}
+
+#caption {
+    display: inline-block;
+    width: 20vw;
+    max-width: 300px;
+    background-color: white;
+
+    z-index: 4;
+    margin-left: 2vw;
+    padding: 30px;
+    padding-bottom: 60px;
+
+    align-self: flex-start;
+
+    font-family: "League Spartan";
+    line-height: 1.15;
+    letter-spacing: -0.15px;
+    font-size: 18px;
+
+    pointer-events: auto;
+}
+
+
+
+
+@media only screen and (max-width: 950px) {
+
+    /* MENU */
+
+    #menu {
+        display: none;
+    }
+
+    #mini-menu {
+        width: 85%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 200px;
+        margin: auto;
+
+        font-size: 35px;
+
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+
+    }
+
+    #dropdown {
+
+        border: 0px;
+        border-right: 5px solid var(--red);
+
+        right: 45px;
+        margin-top: 5px;
+    }
+
+
+
+    /* GRID */
+
+    .grid-item {
+        width: 50%;
+    }
+
+
+
+    /* CONTENT */
+
+    #content {
+        display: block;
+        overflow-y: scroll;
+        height: auto;
+        max-height: 100vh;
+        width: auto;
+
+        padding-bottom: 30px;
+
+        justify-content: center;
+
+        scrollbar-width: none;
+        pointer-events: auto;
+    }
+
+
+    #content img {
+        max-height: none;
+        max-width: 95%;
+        width: 95%;
+        display: block;
+    }
+
+    #caption {
+        width: 95%;
+        max-width: none;
+        margin-left: 2.5%;
+        height: auto;
+        display: inline-block;
+
+        padding: 10px;
+        margin-bottom: 200px;
+
+        display: inline-flex;
+        justify-content: center;
+
+        vertical-align: bottom;
+
+    }
+
+    #date {
+        margin: 0px;
+        border: 0px;
+        font-size: 30px;
+    }
+
+    #caption h1 {
+        font-size: 20px;
+        text-align: left;
+        width: 130px;
+        padding-right: 20px;
+        margin-right: 25px;
+
+        border-right: 2px solid var(--red);
+    }
+
+    #caption-text {
+        margin: 20px 0px;
+        align-self: flex-end;
+        width: 50%;
+    }
+
+    #arrow-menu {
+        font-size: 4vw;
+    }
+
+
+    #closeout {
+
+        position: fixed;
+        top: 25px;
+        left: 90vw;
+
+        font-size: 30px;
+        color: white;
+
+        z-index: 4;
+    }
+
+    #closeout::after {
+        content: '✕';
+    }
+
+    #closeout:hover {
+        cursor: url('../img/site/cursor/fish2.png'), pointer;
+    }
+
+}
