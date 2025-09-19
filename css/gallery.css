@@ -521,12 +521,24 @@ summary:hover {
         cursor: url('../img/site/cursor/fish2.png'), pointer;
     }
 
+    #prev {
+        font-size: 14px;
+    }
+
+    #next {
+        font-size: 14px;
+    }
+
     #nav {
         width: 50vw;
     }
 
+    #navfish img {
+        width: 10vw;
+    }
+
     #navyear {
-        margin-top: 45px;
+        margin-top: 70px;
         font-size: 14px;
     }
 
