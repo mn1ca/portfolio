@@ -27,8 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const selection = document.createElement('span');
         selection.classList.add('choice');
 
-        selection.innerHTML = i;
-        selection.addEventListener('click', () => changeYear(i));
+        if (i === year) selection.innerHTML = `<a href='/illust/index.html'>${i}</a>`;
+        else selection.innerHTML = `<a href='/illust/${i}.html'>${i}</a>`;
+
         document.getElementById('dropdown').append(selection);
     }
 });
@@ -92,27 +93,6 @@ function clearNav() {
     return;
 }
 
-
-function changeYear(year, removed = false) {
-
-    // Set new year
-    document.getElementById('working-year').innerHTML = year;
-
-    // Reset nav if necessary
-    if (!removed) clearNav();
-    nav();
-
-    // Reload grid
-    var grid = document.querySelector('.grid');
-    grid.innerHTML = '';
-    load();
-
-    // Reset scroll
-    window.scroll(0,0);
-
-    return;
-}
-
 function navYear(dir = 0) {
 
     console.log(dir);
@@ -132,7 +112,8 @@ function navYear(dir = 0) {
         else
             document.getElementById('navfish').classList.remove('move-right');
 
-        changeYear(currYear + dir, true);
+        if (currYear + dir == year) window.location.href = '/illust/index.html';
+        else window.location.href = `/illust/${currYear + dir}.html`;
 
     }, 1500);
 }

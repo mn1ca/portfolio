@@ -10,7 +10,7 @@
         <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
         <!-- load menu -->
-        <script src='/script/menu.js'></script>
+        <script type='module' src='/script/menu.js'></script>
 
         <!-- load gallery -->
         <script type='module' src='/script/gallery.js'></script>
@@ -20,18 +20,21 @@
 
     </head>
 
-    <div id='working-year' style='display: none'>2023</div>
+    <div id='working-year' style='display: none'>2025</div>
 
     <body>
 
         <div id='menu'></div>
         <div id='mini-menu'></div>
+
         <div class="grid"></div>
+
+        <div id='nav'></div>
 
         <div id='zoom'>
             <div id='content'></div>
-            <div id='closeout' onclick='document.getElementById("zoom").style.display = "none"'></div>
-            <div id='shadow' onclick='document.getElementById("zoom").style.display = "none"'></div>
+            <div id='closeout' onclick='document.getElementById("zoom").style.display = "none"; document.body.style.overflow = "auto"'></div>
+            <div id='shadow' onclick='document.getElementById("zoom").style.display = "none"; document.body.style.overflow = "auto"'></div>
         </div>
 
     </body>

@@ -318,7 +318,6 @@ summary:hover {
 #prev {
     text-align: end;
     left: 30vw;
-    width: 75px;
 }
 
 #prev::after {
@@ -328,7 +327,6 @@ summary:hover {
 #next {
     text-align: start;
     left: 60vw;
-    width: 75px;
 }
 
 #next::before {
@@ -351,7 +349,7 @@ summary:hover {
     font-size: 16px;
     line-height: 0px;
 
-    z-index: 5;
+    z-index: 3;
     image-rendering: pixelated;
 }
 
@@ -524,12 +522,12 @@ summary:hover {
     }
 
     #nav {
-        width: 45vw;
+        width: 50vw;
     }
 
     #navyear {
-        margin-top: 60px;
-        font-size: 12px;
+        margin-top: 45px;
+        font-size: 14px;
     }
 
 }
