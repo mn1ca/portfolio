@@ -1,9 +1,8 @@
 import data from './logs/illust.json' with { type: 'json' };
 
+document.addEventListener('DOMContentLoaded', load);
 
-
-document.addEventListener('DOMContentLoaded', function() {
-
+export function load() {
     var grid = document.querySelector('.grid'); // Select your Masonry container
 
     // Populate with info from json
@@ -62,8 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-});
-
+}
 
 function format(s) {
     return s.replace(/(..)(?=.)/g, `$1.`);

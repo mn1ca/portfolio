@@ -43,7 +43,7 @@ a[href*="//"]:not([href*="https://mn1ca.neocities.org"]) {
 }
 
 a:hover {
-    filter: brightness(1.5);
+    font-weight: 1000;
     cursor: url('../img/site/cursor/fish2.png'), pointer;
 }
 
@@ -97,40 +97,45 @@ img {
     display: none;
 }
 
-/* ---- DROPDOWN ---- */
+/* ---- DROPDOWN (menu) ---- */
 summary {
     list-style: none;
     cursor: url('/img/site/cursor/fish2.png'), pointer;
 }
 
 summary:hover {
-    filter: brightness(1.5);
+    font-weight: 1000;
 }
 
 #dropdown {
     position: absolute;
-    border-left: 5px solid var(--red);
+    border-left: 2px solid var(--red);
+
     font-size: 20px;
-    width: 125px;
-    margin-left: 5px;
-    margin-top: 15px;
-    padding: 10px 20px;
+
+    margin-left: 8px;
+    margin-top: 10px;
+
+    padding-left: 10px;
+    padding-top: 10px;
 
     z-index: 3;
-    background-color: white;
+
+    display: inline-flex;
+    opacity: .75;
 }
 
 .choice {
-    line-height: 35px;
+    line-height: 30px;
     font-size: 20px;
-    font-weight: 1000;
+    font-weight: 400;
+
+    margin: 0px 12px;
 }
 
 .choice:hover {
     background-color: #fcc2b8;
 }
-
-
 
 
 /* ---- GRID ---- */
@@ -158,8 +163,8 @@ summary:hover {
 }
 
 .grid-item:hover {
-    transform: scale(1.025) rotate(-2deg);
-    transition-duration: 0.5s;
+    transform: scale(1.01);
+    transition-duration: 0.25s;
 
     cursor: url('../img/site/cursor/fish2.png'), pointer;
 }
@@ -217,9 +222,7 @@ summary:hover {
 }
 
 #date {
-    border-bottom: 2px solid var(--red);
     margin: 10px;
-    padding-bottom: 15px;
 }
 
 .arrows {
@@ -284,7 +287,107 @@ summary:hover {
     pointer-events: auto;
 }
 
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    width: 25vw;
+    height: 200px;
+    margin: auto;
+
+    font-size: 20px;
+    text-transform: uppercase;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+
+}
+
+.dir {
+    text-align: center;
+    background-color: var(--bg);
+}
+
+.dir:hover {
+    font-weight: 1000;
+    cursor: url('../img/site/cursor/fish2.png');
+}
+
+#prev {
+    text-align: end;
+    left: 30vw;
+    width: 75px;
+}
+
+#prev::after {
+        content: ' ←';
+    }
+
+#next {
+    text-align: start;
+    left: 60vw;
+    width: 75px;
+}
+
+#next::before {
+        content: '→ ';
+    }
+
+#navyear {
+    position: absolute;
+    left: 50vw;
+    transform: translateX(-50%);
+    margin-top: 100px;
+
+    font-size: 16px;
+}
+
+#navfish {
+    position: absolute;
+    left: 50vw;
+
+    font-size: 16px;
+    line-height: 0px;
+
+    z-index: 5;
+    image-rendering: pixelated;
+}
+
+#navfish img {
+    width: 6vw;
+    transform: translateX(-50%);
+}
+
+@keyframes slide-right {
+  from {
+    left: 50vw;
+  }
+  to {
+    left: 100vw;
+  }
+}
+
+@keyframes slide-left {
+    from {
+    left: 50vw;
+  }
+  to {
+    left: -10vw;
+  }
+}
+
+/* Element to be moved. Must have position: absolute */
+.move-left {
+  animation-name: slide-left;
+  animation-duration: 1.5s;
+}
+
+.move-right {
+  animation-name: slide-right;
+  animation-duration: 1.5s;
+}
 
 
 @media only screen and (max-width: 950px) {
@@ -402,7 +505,6 @@ summary:hover {
 
 
     #closeout {
-
         position: fixed;
         top: 25px;
         left: 90vw;
@@ -419,6 +521,15 @@ summary:hover {
 
     #closeout:hover {
         cursor: url('../img/site/cursor/fish2.png'), pointer;
+    }
+
+    #nav {
+        width: 45vw;
+    }
+
+    #navyear {
+        margin-top: 60px;
+        font-size: 12px;
     }
 
 }
