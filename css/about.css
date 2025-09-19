@@ -218,7 +218,14 @@ textarea {
     overflow-y: scroll;
 }
 
+.credit-desc {
+    font-size: 16px;
+    font-weight: 300;
+}
 
+.credit-desc:before {
+    content: ' • ';
+}
 
 /* Go back */
 

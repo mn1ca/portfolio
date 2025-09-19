@@ -1,25 +1,22 @@
 import { load } from './gallery.js';
 
 const year = 2025;
-const home = `<a href='https://mn1ca.neocities.org'><div id='menu-img'></div></a>`;
+const home = `<a href='../index.html'><div id='menu-img'></div></a>`;
 
 const illust = `<details><summary>illust</summary><span id='dropdown'></span></details>`;
 
-const design = `<a href='/design.html'>design</a>`;
-const three = `<a href='/three.html'>3d</a>`;
-const web = `<a href='/web.html'>web</a>`;
-const about = `<a href='/about.html'>about</a>`;
+const design = `<a href='../design.html'>design</a>`;
+const three = `<a href='../threedee.html'>3d</a>`;
+const about = `<a href='../about.html'>about</a>`;
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    document.getElementById('menu').innerHTML = home + illust + design + three + web + about;
-
-    document.getElementById('mini-menu').innerHTML = home /*+ `≡`*/;
+    document.getElementById('menu').innerHTML =  home + `<div id='menu-text'>` + illust + design + three + about + `</div>`;
 
     // Fish on bottom
     const fish = document.createElement('div');
     fish.id ='navfish';
-    fish.innerHTML = `<img src='/img/site/fish.gif'>`;
+    fish.innerHTML = `<img src='../img/site/fish.gif'>`;
     document.getElementById('nav').append(fish);
     nav();
 
@@ -27,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const selection = document.createElement('span');
         selection.classList.add('choice');
 
-        if (i === year) selection.innerHTML = `<a href='/illust/index.html'>${i}</a>`;
-        else selection.innerHTML = `<a href='/illust/${i}.html'>${i}</a>`;
+        if (i === year) selection.innerHTML = `<a href='../illust/index.html'>${i}</a>`;
+        else selection.innerHTML = `<a href='../illust/${i}.html'>${i}</a>`;
 
         document.getElementById('dropdown').append(selection);
     }
@@ -112,8 +109,10 @@ function navYear(dir = 0) {
         else
             document.getElementById('navfish').classList.remove('move-right');
 
-        if (currYear + dir == year) window.location.href = '/illust/index.html';
-        else window.location.href = `/illust/${currYear + dir}.html`;
+        document.getElementById('navfish').remove();
+
+        if (currYear + dir == year) window.location.href = '../illust/index.html';
+        else window.location.href = `../illust/${currYear + dir}.html`;
 
     }, 1500);
 }

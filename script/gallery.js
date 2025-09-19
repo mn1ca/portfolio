@@ -19,7 +19,7 @@ export function load() {
 
 
             if (use[i].thumbnail) {
-                newDiv.innerHTML = `<img src='/img/illust/${current.id}.png'>
+                newDiv.innerHTML = `<img src='../img/illust/${current.id}.png'>
                 <div class='title'><b>${format(current.id)}</b> ${current.title}</div>`;
 
             } else {
@@ -27,7 +27,7 @@ export function load() {
                 let images = '';
 
                 for (let j = 0; j < use[i].multiple; j++) {
-                    images += `<img src='/img/illust/${current.id}-${j}.png'>`;
+                    images += `<img src='../img/illust/${current.id}-${j}.png'>`;
                 }
 
                 newDiv.innerHTML = `${images}
@@ -41,7 +41,7 @@ export function load() {
         } else {
             newDiv.onclick = function() {openImg(current);};
             newDiv.innerHTML =
-                `<img src='/img/illust/${current.id}.png'>
+                `<img src='../img/illust/${current.id}.png'>
                 <div class='title'><b>${format(current.id)}</b> ${current.title}</div>`;
         }
             grid.appendChild(newDiv);
@@ -76,7 +76,7 @@ function openImg(img) {
     document.getElementById('zoom').style.display = 'inline-flex'; // Show pop-out
 
     // Change pop-out contents
-    document.getElementById('content').innerHTML = `<div><img src='/img/illust/${img.id}.png'></div>
+    document.getElementById('content').innerHTML = `<div><img src='../img/illust/${img.id}.png'></div>
         <div id='caption'>
         <h1>${header(img.id)}${img.title}</h1>
         <div id='caption-text'>${img.caption}</div></div>`;
@@ -92,7 +92,7 @@ function openMultipleImg(img) {
 
     // Change pop-out contents
     document.getElementById('content').innerHTML = `<div id='currentDisplay'>
-        <img src='/img/illust/${img.id}-${currentOpen}.png'></div>
+        <img src='../img/illust/${img.id}-${currentOpen}.png'></div>
         <div id='caption'>
             <h1>${header(img.id)}${img.title}</h1>
         <div id='caption-text'>
@@ -111,7 +111,7 @@ function openMultipleImg(img) {
         currentOpen -= 1;
         if (currentOpen < 0) { currentOpen = img.multiple - 1; }
 
-        document.getElementById('currentDisplay').innerHTML = `<img src='/img/illust/${img.id}-${currentOpen}.png'>`;
+        document.getElementById('currentDisplay').innerHTML = `<img src='../img/illust/${img.id}-${currentOpen}.png'>`;
         document.getElementById('open').innerHTML = `(${currentOpen + 1})`;
 
     }
@@ -121,7 +121,7 @@ function openMultipleImg(img) {
         currentOpen += 1;
         if (currentOpen > img.multiple - 1) { currentOpen = 0; }
 
-        document.getElementById('currentDisplay').innerHTML = `<img src='/img/illust/${img.id}-${currentOpen}.png'>`;
+        document.getElementById('currentDisplay').innerHTML = `<img src='../img/illust/${img.id}-${currentOpen}.png'>`;
         document.getElementById('open').innerHTML = `(${currentOpen + 1})`;
 
     }

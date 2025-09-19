@@ -87,7 +87,7 @@ a[href*="//"]:not([href*="https://mn1ca.neocities.org"]) {
 #line {
     width: 290px;
     position: relative;
-    top: -550px;
+    top: -500px;
     min-height: 200px;
     max-height: 650px;
     z-index: 2;
@@ -112,7 +112,7 @@ a[href*="//"]:not([href*="https://mn1ca.neocities.org"]) {
 .bottom {
     font-size: 18px;
     position: relative;
-    top: 230px;
+    top: 200px;
     width: 200px;
     text-align: right;
     text-transform: uppercase;
