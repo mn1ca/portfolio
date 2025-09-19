@@ -41,7 +41,7 @@ function startBlackjack() {
     total = 0;
     drawn = '';
     numAces = 0;
-    cardsDrawn = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    //cardsDrawn = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 }
 
 function reset() {
@@ -141,13 +141,10 @@ function generateCard(i) {
     }
 
     if (j >= 99) {
-        var dialogue = document.getElementById('dialogue');
-        var choices = document.getElementById('choices');
-
-        alert("Hey diva, I don’t know how this is possible but you’ve tried to draw an unavailable card 100 times in a row. Maybe you should go play real blackjack with this kind of luck??")
-        reset();
-
-        return;
+        alert('Hey card counters, the deck is getting reset!');
+        cardsDrawn = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        var card = Math.floor(Math.random() * (max - min + 1)) + min;
+        cardsDrawn[card - 1]++;
     }
 
     if (!i)
