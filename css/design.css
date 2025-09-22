@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    --red: #c1331c;
+    --brown: #6b220d;
+    --bg: #fceadc;
+
+    --body: 'League Spartan';
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color:var(--bg);
+
+    font-family: Kosugi Maru;
+    font-size: 16px;
+    font-weight: 450;
+    color: var(--red);
+    overflow-y: scroll;
+
+    cursor: url('../img/site/cursor/fish.png'), pointer;
+}
+
+b {
+    font-size: 85%;
+    font-weight: 1000;
+    font-family: Kosugi Maru;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+a {
+    color: var(--red);
+    text-decoration: none;
+
+    cursor:  url('../img/site/cursor/fish2.png'), pointer;
+}
+
+a[href*="//"]:not([href*="https://mn1ca.neocities.org"]) {
+    text-decoration: underline;
+}
+
+a:hover {
+    font-weight: 600;
+    cursor: url('../img/site/cursor/fish2.png'), pointer;
+}
+
+h1 {
+    margin: 0px 0px 5px -5px;
+    line-height: 1;
+
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 80%;
+    font-weight: 100;
+    font-family: Kosugi Maru;
+
+    display: inline;
+    line-height: normal;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+
+img {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+::selection {
+    background-color: #fcc2b8;
+}
+
+/* ---- MENU ---- */
+
+#menu-design {
+    width: 100%;
+
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 5;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 125px;
+    padding: 0 7.5%;
+    margin-bottom: 50px;
+
+    font-size: 20px;
+
+    background-color: var(--bg);
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+#menu-text {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 40%;
+
+    vertical-align: bottom;
+}
+
+#menu-img {
+    width: 150px;
+    content: url('../img/site/mn1ca.png');
+}
+
+#menu-img:hover {
+    filter: brightness(.85);
+}
+
+
+/* ---- GRID ---- */
+
+.grid {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 10px;
+
+}
+
+.grid-item:hover {
+    transform: scale(1.01);
+    transition-duration: 0.25s;
+
+    cursor: url('../img/site/cursor/fish2.png'), pointer;
+}
+
+.grid-item img {
+    width: 100%;
+
+    border: 1px solid var(--red);
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 30px;
+    font-weight: 600;
+
+    text-align: center;
+    line-height: 1;
+}
+
+.title img {
+    border: 0px;
+    width: 60%;
+}
+
+#side-desc {
+
+    position: fixed;
+
+    top: 125px;
+    left: 3%;
+
+    width: 25vw;
+    max-width: 400px;
+    height: 90%;
+    height: auto;
+
+    padding: 20px 10px;
+
+    font-family: var(--body);
+    font-weight: 350;
+    font-size: 18px;
+
+    overflow-y: auto;
+}
+
+#desc-title {
+   font-size: 30px;
+}
+
+#desc-info {
+    padding-left: 5px;
+    margin-bottom: 25px;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#back {
+    font-size: 60px;
+    font-weight: 500;
+    font-family: Kosugi Maru;
+
+    position: relative;
+    top: -5px;
+    left: -10px;
+
+    width: 60px;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+#side-images {
+    position: absolute;
+    top: 125px;
+    right: 0px;
+
+    width: 70vw;
+    height: auto;
+}
+
+.block {
+    display: inline-flex;
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin-bottom: 10px;
+}
+
+.block img {
+    width: 49.5%;
+}
+
+.block-flyers {
+    display: inline-flex;
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin-bottom: 10px;
+}
+
+.block-flyers img {
+    width: 32%;
+}
+
+.block-text {
+    width: 100%;
+}
+
+.block-text p {
+    position: relative;
+    bottom: 160px;
+    left: 55%;
+    z-index: 2;
+
+    width: 40%;
+    font-size: 14px;
+
+    color: #404040;
+}
+
+.block-text p::selection {
+    background-color: #bcbcd1;
+}
+
+.block-scroll {
+    margin-bottom: 10px;
+}
+
+.block-scroll-img {
+    width: 40%;
+}
+
+.block-scroll-img img {
+    width: 100%;
+}
+
+.flickity-prev-next-button {
+  display: none;
+}
+
+.flickity-page-dots {
+    bottom: 10% !important;
+}
+
+.flickity-page-dots .dot {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    background: transparent;
+    cursor: url('../img/site/cursor/fish2.png'), pointer !important;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}
+
+@media only screen and (max-width: 950px) {
+
+    /* MENU */
+
+    #menu-design {
+        position: static;
+        width: 100%;
+        margin: auto;
+    }
+
+    #menu-img {
+        margin-right: 3vw;
+    }
+
+    #menu-text {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+
+     #menu-text > *:not(:last-child) {
+        margin-bottom: 5px; /* Adds 20px space below all children except the last one */
+    }
+
+    #dropdown {
+
+        margin-left: 8px;
+        margin-top: 10px;
+
+        padding: 2px;
+    }
+
+
+
+    /* GRID */
+
+    .grid-item {
+        width: 100%;
+    }
+
+    #side-desc {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+
+        padding: 20px 30px;
+    }
+
+    #side-images {
+        position: static;
+        width: 100%;
+
+        padding: 0px 10px;
+    }
+}

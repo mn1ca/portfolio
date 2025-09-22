@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
 :root {
@@ -70,18 +69,25 @@ img {
 
 /* ---- MENU ---- */
 
-#menu {
-    width: 85%;
+#menu-illust {
+    width: 100%;
+
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 5;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     height: 125px;
-    margin: auto;
+    padding: 0 7.5%;
     margin-bottom: 50px;
 
     font-size: 20px;
+
+    background-color: var(--bg);
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
@@ -128,7 +134,7 @@ summary:hover {
     z-index: 3;
 
     display: inline-flex;
-    opacity: .75;
+
 }
 
 .choice {
@@ -137,6 +143,7 @@ summary:hover {
     font-weight: 400;
 
     margin: 0px 12px;
+    opacity: .75;
 }
 
 .choice:hover {
@@ -399,24 +406,38 @@ summary:hover {
 
     /* MENU */
 
-    #menu {
-        width: 90%;
+    #menu-illust {
+        width: 100%;
         margin: auto;
     }
 
     #menu-text {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+
+     #menu-text > *:not(:last-child) {
+        margin-bottom: 5px; /* Adds 20px space below all children except the last one */
     }
 
     #dropdown {
+        display: flex;
+        flex-direction: column;
 
-        margin-left: 8px;
-        margin-top: 10px;
+        margin: 0px;
+        padding: 2px 0px;
+        width: 20%;
+        right: 6%;
 
-        padding: 2px;
+        border: 0px;
+
+        background-color: var(--bg);
     }
 
-
+    .choice {
+        line-height: 25px;
+    }
 
     /* GRID */
 

@@ -2,12 +2,12 @@ import data from './logs/illust.json' with { type: 'json' };
 
 document.addEventListener('DOMContentLoaded', load);
 
-export function load() {
-    var grid = document.querySelector('.grid'); // Select your Masonry container
+function load() {
+    const grid = document.querySelector('.grid'); // Select your Masonry container
 
     // Populate with info from json
-    let version = document.getElementById('working-year').innerHTML;
-    var use = data[version];
+    const version = document.getElementById('working-year').innerHTML;
+    const use = data[version];
 
     for (let i = 0; i < use.length; i++) {
 
@@ -15,8 +15,8 @@ export function load() {
         newDiv.classList.add('grid-item');
         const current = use[i];
 
+        // Handle multiple images
         if (use[i].multiple) {
-
 
             if (use[i].thumbnail) {
                 newDiv.innerHTML = `<img src='../img/illust/${current.id}.png'>
@@ -32,8 +32,6 @@ export function load() {
 
                 newDiv.innerHTML = `${images}
                 <div class='title'><b>${format(current.id)}</b> ${current.title}</div>`
-
-
             }
 
             newDiv.onclick = function() {openMultipleImg(current)};
@@ -45,11 +43,7 @@ export function load() {
                 <div class='title'><b>${format(current.id)}</b> ${current.title}</div>`;
         }
             grid.appendChild(newDiv);
-
-
     }
-
-
 
     // Masonry stuff
     if (grid) {
@@ -125,8 +119,6 @@ function openMultipleImg(img) {
         document.getElementById('open').innerHTML = `(${currentOpen + 1})`;
 
     }
-
-
 }
 
 function closeImg() {

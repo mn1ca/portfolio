@@ -3,7 +3,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>mn1ca</title>
-        <link href="../css/illust.css" rel="stylesheet" type="text/css" media="all">
+        <link href="../css/design.css" rel="stylesheet" type="text/css" media="all">
 
         <!-- masonry gallery imports -->
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
@@ -13,23 +13,34 @@
         <script type='module' src='../script/menu.js'></script>
 
         <!-- load gallery -->
-        <script type='module' src='../script/gallery.js'></script>
+        <script type='module' src='../script/masonry.js'></script>
 
         <!-- favicon -->
         <link rel="icon" type="image/x-icon" href="../img/site/favicon.png">
 
     </head>
 
-    <div id='working-year' style='display: none'>2023</div>
-    <div id='working-type' style='display: none'>illust</div>
-
     <body>
 
-        <div id='menu-illust'></div>
+        <div id='menu-design' style='position: static'></div>
 
-        <div class="grid"></div>
+        <div class="grid">
 
-        <div id='nav'></div>
+            <a href='./care.html'><div class='grid-item'>
+                <img src='../img/design/care/cover.png'>
+                <div class='title'>
+                    <img src='../img/design/care/logo.png'><br>graphic design
+                </div>
+            </div></a>
+
+            <div class='grid-item'>
+                <img src='../img/design/decibels/cover.png'>
+                <div class='title'>
+                    <b style='text-transform: uppercase'>decibels</b> web game
+                </div>
+            </div>
+
+        </div>
 
         <div id='zoom'>
             <div id='content'></div>

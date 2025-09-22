@@ -1,33 +1,42 @@
-import { load } from './gallery.js';
-
 const year = 2025;
 const home = `<a href='../index.html'><div id='menu-img'></div></a>`;
 
-const illust = `<details><summary>illust</summary><span id='dropdown'></span></details>`;
+const illust = `<details><summary><span style='font-weight:1000'>illust</span></summary><span id='dropdown'></span></details>`;
+const illustAlt = `<a href='../illust/index.html'>illust</a>`;
 
-const design = `<a href='../design.html'>design</a>`;
+const design = `<a href='../design/index.html'><span style='font-weight:1000'>design</span></a>`;
+const designAlt = `<a href='../design/index.html'>design</a>`;
+
 const three = `<a href='../threedee.html'>3d</a>`;
 const about = `<a href='../about.html'>about</a>`;
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    document.getElementById('menu').innerHTML =  home + `<div id='menu-text'>` + illust + design + three + about + `</div>`;
+    if (document.getElementById('menu-design'))
+        document.getElementById('menu-design').innerHTML =  home + `<div id='menu-text'>` + illustAlt + design + three + about + `</div>`;
+
+    if (document.getElementById('menu-illust'))
+        document.getElementById('menu-illust').innerHTML =  home + `<div id='menu-text'>` + illust + designAlt + three + about + `</div>`;
 
     // Fish on bottom
-    const fish = document.createElement('div');
-    fish.id ='navfish';
-    fish.innerHTML = `<img src='../img/site/fish.gif'>`;
-    document.getElementById('nav').append(fish);
-    nav();
+    if (document.getElementById('nav')) {
+        const fish = document.createElement('div');
+        fish.id ='navfish';
+        fish.innerHTML = `<img src='../img/site/fish.gif'>`;
+        document.getElementById('nav').append(fish);
+        nav();
+    }
 
-    for (let i = 2023; i < year + 1; i++) {
-        const selection = document.createElement('span');
-        selection.classList.add('choice');
+    if (document.getElementById('dropdown')) {
+        for (let i = 2023; i < year + 1; i++) {
+            const selection = document.createElement('span');
+            selection.classList.add('choice');
 
-        if (i === year) selection.innerHTML = `<a href='../illust/index.html'>${i}</a>`;
-        else selection.innerHTML = `<a href='../illust/${i}.html'>${i}</a>`;
+            if (i === year) selection.innerHTML = `<a href='../illust/index.html'>${i}</a>`;
+            else selection.innerHTML = `<a href='../illust/${i}.html'>${i}</a>`;
 
-        document.getElementById('dropdown').append(selection);
+            document.getElementById('dropdown').append(selection);
+        }
     }
 });
 
