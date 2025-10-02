@@ -62,7 +62,7 @@ a[href*="//"]:not([href*="https://mn1ca.neocities.org"]) {
     width: 195px;
     height:418px;
     position: relative;
-    top: -700px;
+    top: -650px;
     left: 155px;
     background: url('../img/site/index/hook.png') 0 0;
     transform: scale(0.35);
@@ -74,7 +74,7 @@ a[href*="//"]:not([href*="https://mn1ca.neocities.org"]) {
 #clickme {
     width: 100px;
     position: relative;
-    top: -960px;
+    top: -900px;
     left: 220px;
 
     display: none;
@@ -124,7 +124,7 @@ a[href*="//"]:not([href*="https://mn1ca.neocities.org"]) {
 @media only screen and (max-width: 600px) {
 
     #clickme {
-        top: -910px;
+        top: -850px;
         left: 150px;
         width: 50px;
     }
@@ -141,7 +141,7 @@ a[href*="//"]:not([href*="https://mn1ca.neocities.org"]) {
     }
 
     #clickme {
-        top: -910px;
+        top: -850px;
         left: 180px;
         width: 50px;
     }
