@@ -233,9 +233,9 @@ textarea {
     width: 250px;
     height: 250px;
 
-    background: url("../img/about/stuff.png") 0 0;
+    background: url("./img/stuff.png") 0 0;
 
-    cursor: url('../img/site/cursor/fish2.png'), pointer;
+    cursor: url('/img/cursor/fish2.png'), pointer;
 }
 
 .object-img:hover {
