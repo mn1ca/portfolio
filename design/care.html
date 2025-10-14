@@ -18,7 +18,7 @@
                const scrolls = document.querySelectorAll('.block-scroll');
 
                scrolls.forEach(function(scroll) {
-                    const flkty = new Flickity(scroll, {cellAlign: 'left',});
+                    const flkty = new Flickity(scroll, {cellAlign: 'left', imagesLoaded: true});
                 });
             }
             );

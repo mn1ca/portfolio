@@ -7,6 +7,8 @@
     --bg: #fceadc;
 }
 
+* { box-sizing: border-box; }
+
 /* Default styles */
 
 body {
@@ -91,23 +93,22 @@ img {
 /* Structural */
 
 #wrapper {
-    width:100%;
-    height: auto;
-    margin: 0 auto;
-    position: relative;
+    width: 100%;
+    text-align: center;
+    align-items: flex-start;
 }
 
 #sidebar {
-
+    margin-top: 40px;
     width: 400px;
 
     position: relative;
-    left: 275px;
-    top: 50px;
+
+    display: inline-block;
 }
 
 .header {
-    padding: 10px 0px 5px 20px;
+    padding: 10px 20px 0px 20px;
     cursor: url('../img/site/cursor/fish2.png'), pointer;
     list-style: none;
 
@@ -122,9 +123,7 @@ img {
 
 .innards {
     text-align: left;
-    padding: 0px 20px;
-    margin-top: 10px;
-    margin-left: 2px;
+    margin: 10px 20px;
     line-height: 120%;
     font-family: League Spartan;
 
@@ -274,23 +273,24 @@ textarea {
 /* Objects */
 
 #title {
-    position: relative;
-    left: -325px;
-    top: -20px;
     z-index: -2;
     pointer-events: none;
 }
 
 #object-container {
-    position: relative;
-    top: 30px;
-    right: 250px;
-    width: 0px;
-    height: 0px;
+    width: 600px;
+    height: 90vh;
+
+    margin-right: 50px;
+    vertical-align: top;
+
+    display: inline-block;
 }
 
 .object {
     position: relative;
+    width: 0px;
+    height: 0px;
 }
 
 .subtitle {
@@ -362,7 +362,7 @@ textarea {
     display: block;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1125px) {
     #sidebar {
         position: fixed;
         width: 0px;
@@ -382,10 +382,11 @@ textarea {
         left: 50%;
         transform: translate(-50%, -50%);
 
-        border:1px solid var(--red);
+        border: 1px solid var(--red);
         display: none;
 
         max-height: 60vh;
+        min-width: 400px;
         width: 60vw;
 
         background-color: var(--bg);
@@ -408,7 +409,7 @@ textarea {
     }
 
     textarea {
-      width: auto;
+      width: 100%;
     }
 
     #button-display {
@@ -424,14 +425,22 @@ textarea {
         position: static;
         width: 80vw;
         height: auto;
+        margin: auto;
+
+        text-align: center;
     }
 
     .object {
         position: static;
         display: inline-block;
 
+        width: auto;
+        height: auto;
+
         margin: 20px;
         margin-bottom: 50px;
+
+        text-align: center;
     }
 
     .object-desc {
