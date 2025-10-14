@@ -5,7 +5,7 @@ var fish = 0;
 
 function fishing() {
     line = document.getElementById("line");
-    position = (event.pageY) - 150;
+    position = (event.pageY) - 75;
     line.style.height = position + 'px';
 }
 
