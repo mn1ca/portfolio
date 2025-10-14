@@ -5,6 +5,7 @@
         <title>mn1ca</title>
         <link href="css/about.css" rel="stylesheet" type="text/css" media="all">
         <script src="script/about.js"></script>
+        <script type='module' src='../script/about-content.js'></script>
 
         <!-- favicon -->
         <link rel="icon" type="image/x-icon" href="img/site/favicon.png">
@@ -88,62 +89,8 @@
                 <a href='https://www.goodreads.com/user/show/159561285-moncia' target='_blank'>goodreads</a>
 
                 <details id='buttons'>
-                <summary><span class='underline'>button wall</span></summary>
+                    <summary><span class='underline'>button wall</span></summary>
                     <div id='button-display'>
-                    <a href='https://bdsmovement.net/Guide-to-BDS-Boycott' target='_blank'>
-                    <img src='img/buttons/freegaza.png' style='image-rendering: pixelated'></a>
-
-                    <a href='https://cloverbell.neocities.org' target='_blank'>
-                    <img src='img/buttons/cloverbell.gif' style='image-rendering: pixelated'></a>
-
-                    <a href='https://hellomei.dev' target='_blank'>
-                    <img src='img/buttons/hellomei.gif' style='image-rendering: pixelated'></a>
-
-                    <a href='https://milk-tea.neocities.org' target='_blank'>
-                    <img src='img/buttons/milktea.gif' style='image-rendering: pixelated'></a>
-
-                    <a href='https://hillhouse.neocities.org' target='_blank'>
-                    <img src='img/buttons/hillhouse.gif' style='image-rendering: pixelated'></a>
-
-                    <a href='https://cyberstheb.neocities.org' target='_blank'>
-                    <img src='img/buttons/cyberstheb.png' style='image-rendering: pixelated'></a>
-
-                    <a href='https://sunnytea.org' target='_blank'>
-                    <img src='img/buttons/sunnytea.gif' style='image-rendering: pixelated'></a>
-
-                    <a href='https://kyu.channel' target='_blank'>
-                    <img src='img/buttons/kyu.gif' style='width: 88px; image-rendering: pixelated'></a>
-
-                    <a href='https://fuchi.neocities.org' target='_blank'>
-                    <img src='img/buttons/fuchi.png' style='image-rendering: pixelated'>
-                    </a>
-
-                    <a href='https://freakphone.net' target='_blank'>
-                    <img src='img/buttons/freakphone.gif' style='image-rendering: pixelated'>
-                    </a>
-
-                    <a href='https://bruisedgh0st.neocities.org' target='_blank'>
-                    <img src='img/buttons/bruisedghost.gif' style='image-rendering: pixelated'>
-                    </a>
-
-                    <a href='https://projectc190.neocities.org' target='_blank'>
-                    <img src='img/buttons/c190.png' style='width: 88px; image-rendering: pixelated'>
-                    </a>
-
-                    <a href='https://doqmeat.com' target='_blank'>
-                    <img src='img/buttons/doqmeat.png' style='image-rendering: pixelated'></a>
-
-                    <a href='https://zenmaistudio.com' target='_blank'>
-                    <img src='img/buttons/zenmai.gif' style='image-rendering: pixelated'></a>
-
-                    <a href='https://nenrikido.neocities.org' target='_blank'>
-                    <img src='img/buttons/nenrikido.gif' style='image-rendering: pixelated'></a>
-
-                    <a href='https://strawberryreverie.neocities.org' target='_blank'>
-                    <img src='img/buttons/strawberryreverie.png' style='image-rendering: pixelated'></a>
-
-                    <a href='https://ashtreelane.neocities.org' target='_blank'>
-                    <img src='img/buttons/ashtreelane.gif' style='image-rendering: pixelated'></a>
                     </div>
                 </details>
 
@@ -201,7 +148,8 @@
 
                 <div class='object-desc' id='desc3'>
                     <div class='object-title'>lippie</div>
-                    my guilty pleasure is collecting lip products. lately, i've been wearing eadem le chouchou <i>(bissap glaze)</i>, rom&nd juicy tint <i>(campbell grape)</i>, & glossier balmdotcom <i>(hot cocoa)</i>.
+                    my guilty pleasure is collecting lip products. lately, i've been wearing <span id='lippies'>lip stuff!</span>.
+                    <br>
                 </div>
             </div>
 
@@ -212,7 +160,7 @@
         </div>
 
         <div id='hide-while-active'>
-        <div id='shadow' onclick='toggleOff()'></div>
+            <div id='shadow' onclick='toggleOff()'></div>
         </div>
     </div>
 

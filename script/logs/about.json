@@ -1,0 +1,113 @@
+
+
+{
+    "buttons": [
+        {
+            "img": "freegaza.png",
+            "link": "https://bdsmovement.net/Guide-to-BDS-Boycott"
+        },
+        {
+            "img": "cloverbell.gif",
+            "link": "https://cloverbell.neocities.org"
+        },
+        {
+            "img": "hellomei.gif",
+            "link": "https://hellomei.dev"
+        },
+        {
+            "img": "milktea.gif",
+            "link": "https://milk-tea.neocities.org"
+        },
+        {
+            "img": "hillhouse.gif",
+            "link": "https://hillhouse.neocities.org"
+        },
+        {
+            "img": "cyberstheb.png",
+            "link": "https://cyberstheb.neocities.org"
+        },
+        {
+            "img": "tigercarnival.png",
+            "link": "https://bisuko.neocities.org"
+        },
+        {
+            "img": "sunnytea.gif",
+            "link": "https://sunnytea.org"
+        },
+        {
+            "img": "kyu.gif",
+            "link": "https://kyu.channel"
+        },
+        {
+            "img": "fuchi.png",
+            "link": "https://fuchi.neocities.org"
+        },
+        {
+            "img": "freakphone.gif",
+            "link": "https://freakphone.net"
+        },
+        {
+            "img": "bruisedghost.gif",
+            "link": "https://bruisedgh0st.neocities.org"
+        },
+        {
+            "img": "c190.png",
+            "link": "https://projectc190.neocities.org"
+        },
+        {
+            "img": "doqmeat.png",
+            "link": "https://doqmeat.com"
+        },
+        {
+            "img": "zenmai.gif",
+            "link": "https://zenmaistudio.com"
+        },
+        {
+            "img": "joroki.gif",
+            "link": "https://joroki.neocities.org"
+        },
+        {
+            "img": "nenrikido.gif",
+            "link": "https://nenrikido.neocities.org"
+        },
+        {
+            "img": "tuesdaysplace.gif",
+            "link": "https://tuesdaysplace.neocities.org"
+        },
+        {
+            "img": "ashtreelane.gif",
+            "link": "https://ashtreelane.neocities.org"
+        }
+    ],
+
+    "lippies": [
+        {
+            "name": "glossier balmdotcom",
+            "shade": "hot cocoa"
+        },
+        {
+            "name": "rom&nd glasting balm",
+            "shade": "rose bahng"
+        },
+        {
+            "name": "fwee 3d volumizing gloss",
+            "shade": "vanilla 70%"
+        },
+        {
+            "name": "into you lip mud",
+            "shade": "rose taupe"
+        },
+        {
+            "name": "daisydoll watery lip tint",
+            "shade": "p-01 mauve"
+        },
+        {
+            "name": "rom&nd juicy tint",
+            "shade": "campbell grape"
+        },
+        {
+            "name": "mac lustreglass sheer",
+            "shade": "alone time"
+        }
+    ]
+}
