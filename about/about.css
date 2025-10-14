@@ -321,7 +321,6 @@ textarea {
         display: none;
 
         max-height: 60vh;
-        min-width: 400px;
         width: 60vw;
 
         background-color: var(--bg);
