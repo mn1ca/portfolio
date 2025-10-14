@@ -1,15 +1,19 @@
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>mn1ca</title>
-        <link href="/css/about.css" rel="stylesheet" type="text/css" media="all">
-        <script src="/script/about.js"></script>
-        <script type='module' src='/script/about-content.js'></script>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta charset='UTF-8'>
+        <title>about • mn1ca</title>
+
+        <!-- css -->
+        <link href='/main.css' rel='stylesheet' type='text/css' media='all'>
+        <link href='./about.css' rel='stylesheet' type='text/css' media='all'>
+
+        <!-- scripts -->
+        <script src='./script/about.js'></script>
+        <script type='module' src='./script/about-content.js'></script>
 
         <!-- favicon -->
-        <link rel="icon" type="image/x-icon" href="/img/site/favicon.png">
-
+        <link rel='icon' type='image/x-icon' href='/img/favicon.png'>
     </head>
 
     <body>
@@ -17,30 +21,30 @@
 
         <div id='object-container'>
 
-            <img src='/img/about/title.png' id='title'>
+            <img src='./img/title.png' id='title'>
 
             <div class='object' style='top: -75px; left: 50px'>
                 <div class='number' style='top: 50px; left: 200px;'>01</div>
-                <div class='object-img' style='background: url("/img/about/stuff.png") 0 0;' onclick='toggle(0, true)'></div>
+                <div class='object-img' style='background: url("./img/stuff.png") 0 0;' onclick='toggle(0, true)'></div>
                 <span class='subtitle'>student id / <b>about me</b></span>
             </div>
 
             <div class='object' style='top: 20px; left: 325px;'>
                 <div class='number' style='top: 75px; right: 0px;'>02</div>
-                <div class='object-img' style='background: url("/img/about/stuff.png") -250px 0;' onclick='toggle(1, true)'></div>
+                <div class='object-img' style='background: url("./img/stuff.png") -250px 0;' onclick='toggle(1, true)'></div>
                 <span class='subtitle'>earbuds / <b>links</b></span>
             </div>
 
             <div class='object' style='top: 125px; left: 50px'>
                 <div class='number' style='top: 175px; left: 10px'>03</div>
-                <div class='object-img' style='background: url("/img/about/stuff.png") 250px 0;' onclick='toggle(2, true)'></div>
+                <div class='object-img' style='background: url("./img/stuff.png") 250px 0;' onclick='toggle(2, true)'></div>
                 <span class='subtitle'>keychain / <b>sitely</b></span>
             </div>
 
             <div class='object' style='top: 245px; left: 250px'>
-            <div class='number' style='top: 175px; left: 200px'>04</div>
-            <div class='object-img' style='background: url("/img/about/stuff.png") -500px 0;' onclick='toggle(3, true)'></div>
-            <span class='subtitle'>lippie / <b>go back</b></span>
+                <div class='number' style='top: 175px; left: 200px'>04</div>
+                <div class='object-img' style='background: url("./img/stuff.png") -500px 0;' onclick='toggle(3, true)'></div>
+                <span class='subtitle'>lippie / <b>go back</b></span>
             </div>
 
         </div>
@@ -110,7 +114,7 @@
                 <span class='innard-title'>03<br>sitely</span>
                 <h2>button</h2>
                 <details>
-                <summary><img src='/img/site/mn1ca.gif' style='image-rendering:pixelated; margin-right: 5px'> (click for button code!)</summary>
+                <summary><img src='./img/buttons/mn1ca.gif' style='image-rendering:pixelated; margin-right: 5px'> (click for button code!)</summary>
 
                 <textarea readonly><a href='https://mn1ca.neocities.org' target='_blank'><img src= '★' style='image-rendering: pixelated'></a></textarea>
                 </details>
@@ -141,27 +145,21 @@
             </div>
             <div class='innards' style='font-family: Kosugi Maru; font-size: 20px;' id='text3'>
                 <span class='innard-title'>04<br>go back</span>
-                <a href='./index.html' class='link'>home</a> /
-                <a href='./illust/index.html' class='link'>illust</a> /
-                <a href='./design/index.html' class='link'>design</a> /
-                <a href='./threedee.html' class='link'>3d</a>
+                <a href='/' class='link'>home</a> /
+                <a href='/illust' class='link'>illust</a> /
+                <a href='/design' class='link'>design</a> /
+                <a href='/threedee.html' class='link'>3d</a>
 
                 <div class='object-desc' id='desc3'>
                     <div class='object-title'>lippie</div>
-                    my guilty pleasure is collecting lip products. lately, i've been wearing <span id='lippies'>lip stuff!</span>.
-                    <br>
+                    my guilty pleasure is collecting lip products. lately, i've been wearing <span id='lippies'>lip stuff... wait, you shouldn't be seeing this!</span>.
                 </div>
             </div>
-
-
-
-            <div style='height: 30px'></div>
-
         </div>
 
         <div id='hide-while-active'>
             <div id='shadow' onclick='toggleOff()'></div>
         </div>
-    </div>
 
+</div> <!-- wrapper -->
 </body>
