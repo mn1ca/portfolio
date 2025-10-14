@@ -1,55 +1,60 @@
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta charset='UTF-8'>
         <title>mn1ca</title>
-        <link href="css/index.css" rel="stylesheet" type="text/css" media="all">
-        <script src="script/fishing.js"></script>
+
+        <!-- css -->
+        <link href='/main.css' rel='stylesheet' type='text/css' media='all'>
+        <link href='/home/index.css' rel='stylesheet' type='text/css' media='all'>
+
+        <!-- script -->
+        <script src='/home/script/fishing.js'></script>
 
         <!-- favicon -->
-        <link rel="icon" type="image/x-icon" href="img/site/favicon.png">
-
+        <link rel='icon' type='image/x-icon' href='/img/favicon.png'>
     </head>
 
-
 <body>
-<center>
     <div id='wrapper'>
 
-
-        <div id='main'></div>
-
-        <div class='link' style='top: 100px'>
-        <a href='/illust'>
-        illust
-        </a>
+        <div id='main'>
+            <div id='cover'></div>
+            <div id='line'></div>
+            <div id='hook' onclick='catchFish()'></div>
+            <div id='clickme'>click me!</div>
         </div>
 
-        <div class='link' style='top: 125px'>
-        <a href='index.html'>
-        design
-        </a>
+        <div id='links'>
+            <div class='link'>
+            <a href='/illust'>
+            illust
+            </a>
+            </div>
+
+            <div class='link'>
+            <a href='/design'>
+            design
+            </a>
+            </div>
+
+            <div class='link'>
+            <a href='/'>
+            3d
+            </a>
+            </div>
+
+            <div class='link'>
+            <a href='/about'>
+            about
+            </a>
+            </div>
+
+            <div class='bottom'>© mn1ca</div>
         </div>
 
-        <div class='link' style='top: 150px'>
-        <a href='index.html'>
-        3d
-        </a>
-        </div>
 
-        <div class='link' style='top: 175px'>
-        <a href='/about'>
-        about
-        </a>
-        </div>
-
-        <div class='bottom'>© mn1ca</div>
-
-        <div id='line'></div>
-        <div id='hook' onclick='catchFish()'></div>
-        <div id='clickme'>click me!</div>
 
     </div>
 
-</center>
-</body>
+</body></html>

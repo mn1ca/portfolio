@@ -1,54 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
-
-:root {
-    --red: #c1331c;
-    --bg: #fceadc;
-}
-
-* { box-sizing: border-box; }
-
-/* Default styles */
-
-body {
-   background-color:var(--bg);
-
-    /**font defaults**/
-    font-family: "Kosugi Maru";
-    font-size: 18px;
-    color: var(--red);
-    overflow-y: scroll;
-
-    cursor: url('../img/site/cursor/fish.png'), pointer;
-
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-
-}
-
-b {
-    font-size: 80%;
-    font-weight: 100;
-    font-family: Kosugi Maru;
-
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-}
-
-a {
-    color: var(--red);
-    text-decoration: none;
-
-    cursor:  url('../img/site/cursor/fish2.png'), pointer;
-}
-
-a[href*="//"]:not([href*="https://mn1ca.neocities.org"]) {
-    text-decoration: underline;
-}
-
 p {
     margin: 0px;
     line-height: 100%;
@@ -56,89 +5,69 @@ p {
 }
 
 h1 {
+    width: 250px;
+    margin-bottom: -3px;
+
     font-size: 120%;
     font-weight: 1000;
     font-style: italic;
-    margin-bottom: -3px;
-
-    width: 250px;
 }
 
 h2 {
+    margin: 15px 0px 0px;
+
     font-size: 90%;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: -1px;
 
-    margin: 15px 0px 0px;
-
-     -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-
-img {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-}
-
-::selection {
-    border: 1px dashed #fcc2b8;
-    background-color: #fcc2b8;
-}
-
 
 
 /* Structural */
 
-#wrapper {
-    width: 100%;
-    text-align: center;
-    align-items: flex-start;
-}
-
 #sidebar {
-    margin-top: 40px;
     width: 400px;
-
-    position: relative;
+    margin-top: 40px;
 
     display: inline-block;
 }
 
 .header {
     padding: 10px 20px 0px 20px;
-    cursor: url('../img/site/cursor/fish2.png'), pointer;
-    list-style: none;
-
-    font-size: 24px;
-    font-weight: 1000;
-    text-align: left;
 
     display: flex;
 
     border-top: 1px solid var(--red);
+
+    list-style: none;
+    font-size: 24px;
+    font-weight: 1000;
+    text-align: left;
+
+    cursor: url('/img/cursor/fish2.png'), pointer;
 }
 
 .innards {
-    text-align: left;
     margin: 10px 20px;
-    line-height: 120%;
-    font-family: League Spartan;
-
-
-    -webkit-user-select: text; /* Safari */
-    -ms-user-select: text; /* IE 10 and IE 11 */
-    user-select: text; /* Standard syntax */
 
     display: none;
+
+    text-align: left;
+    line-height: 120%;
+    font-family: var(--type2);
+
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 .innard-title {
     display: none;
 }
-
 
 
 /* Show/hide */
@@ -147,15 +76,14 @@ img {
     transition-property: transform;
     transition-duration: 0.35s;
 
-    font-family: "roboto", sans-serif;
+    font-family: var(--type2);
     font-size: 32px;
-    font-weight: 100;
+    font-weight: 500;
 
     margin-left: 100px;
 }
 
 .down {
-
     transition-property: transform;
     transition-duration: 0.35s;
 
@@ -176,17 +104,17 @@ summary {
     font-size: 14px;
     font-family: "Kosugi Maru";
 
-    cursor: url('../img/site/cursor/fish2.png'), pointer;
+    cursor: url('/img/cursor/fish2.png'), pointer;
 
-     -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 details {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 textarea {
@@ -196,24 +124,25 @@ textarea {
     height: 55px;
     padding: 5px;
 
-    font-family: Kosugi Maru;
-    border-color: #c1331c;
+    font-family: var(--type1);
+    border-color: var(--red);
     border-radius: 5px;
 }
 
 .underline {
     text-decoration: underline;
-    font-family: 'League Spartan';
+    font-family: var(--type2);
     font-size: 18px;
 
-     -webkit-user-select: text; /* Safari */
-    -ms-user-select: text; /* IE 10 and IE 11 */
-    user-select: text; /* Standard syntax */
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 #button-display {
     width: 300px;
     height: 100px;
+
     overflow-y: scroll;
 
     text-decoration: none;
@@ -239,35 +168,36 @@ textarea {
 }
 
 
-
 /* Links */
 
 #contact {
     margin-left: 15px;
     margin-bottom: 5px;
+
     font-weight: 400;
     line-height: 110%;
 }
 
 #statuscafe {
-    border-left: 1px solid var(--red);
     padding: 5px 10px 0px;
     margin: 2px 0px 10px 5px;
+
+    border-left: 1px solid var(--red);
 
     font-weight: 300;
     line-height: 110%;
 }
 
 #statuscafe-time {
-    font-family: Kosugi Maru;
+    margin-top: 5px;
+
+    font-family: var(--type1);
     font-weight: 1000;
     font-size: 14px;
 
-    margin-top: 5px;
-
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 
@@ -282,17 +212,17 @@ textarea {
 #object-container {
     width: 600px;
     height: 90vh;
-
     margin-right: 50px;
-    vertical-align: top;
 
+    vertical-align: top;
     display: inline-block;
 }
 
 .object {
-    position: relative;
     width: 0px;
     height: 0px;
+
+    position: relative;
 }
 
 .subtitle {
@@ -302,6 +232,7 @@ textarea {
 .object-img {
     width: 250px;
     height: 250px;
+
     background: url("../img/about/stuff.png") 0 0;
 
     cursor: url('../img/site/cursor/fish2.png'), pointer;
@@ -314,49 +245,52 @@ textarea {
 
 .number {
     position: relative;
+
     font-size: 60px;
     font-weight: 1000;
+
     z-index: -1;
 }
 
 .object-desc {
     margin: 50px 0px 2px;
     padding: 0px 20px 20px;
+
     background-color: white;
     border-radius: 20px;
+
+    display: none;
 
     font-family: Kosugi Maru;
     font-size: 14px;
     line-height: 110%;
     text-align: justify;
-
-    display: none;
-
 }
 
 .object-title {
+    width: 110px;
+    padding: 10px;
+
+    position: relative;
+    top: -13px;
+    left: -10px;
+
     border: 1px solid var(--red);
     border-radius: 2px;
     background-color: var(--bg);
-    position: relative;
-
-    padding: 10px;
 
     text-align: center;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: -1px;
-    font-family: League Spartan;
-
-    top: -13px;
-    left: -10px;
+    font-family: var(--type2);
 
     transform: rotate(-8deg);
 
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .show {

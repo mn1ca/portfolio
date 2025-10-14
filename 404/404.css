@@ -1,0 +1,120 @@
+b {
+    font-weight: 1800;
+    text-transform: uppercase;
+    font-size: 85%;
+}
+
+p {
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.65;
+}
+
+#main {
+    width: 400px;
+    margin: 20px auto;
+
+    content: url('./img/fished.png');
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+#cat-container {
+    margin-top: 40px;
+}
+
+#cat {
+    width: 70px;
+
+    position: relative;
+    top: -25px;
+    left: 250px;
+    vertical-align: top;
+
+    content: url('./img/404cat.png');
+
+    z-index: 2;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#dialogue {
+    height: 65px;
+}
+
+#text-bubble {
+    width: 330px;
+    height: 125px;
+    padding: 0px 30px 20px;
+    margin-bottom: 40px;
+
+    background-color: white;
+    border-radius: 20px;
+
+    font-family: var(--type2);
+    line-height: 125%;
+    text-align: left;
+
+    display: inline-block;
+}
+
+#bubble-title {
+    width: 80px;
+    padding: 10px;
+
+    position: relative;
+    top: -15px;
+    left: -40px;
+
+    border: 1px solid var(--red);
+    border-radius: 2px;
+    background-color: var(--bg);
+
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-family: var(--type2);
+
+    z-index: 3;
+
+    transform: rotate(-5deg);
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#choices {
+    width: 350px;
+    height: 80px;
+    margin: 10px;
+    margin-top: 0px;
+
+    font-size: 20px;
+    line-height: 130%;
+    text-align: left;
+
+    display: inline-block;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.choice:hover {
+    cursor: url('../img/cursor/fish2.png'), pointer;
+}
+
+.choice::before {
+    content: "\00a0\00a0";
+}
+
+.choice:hover::before {
+    content: '> ';
+}

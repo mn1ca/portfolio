@@ -1,6 +1,6 @@
 var cardsDrawn = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-var min = 1;
-var max = 13;
+const min = 1;
+const max = 13;
 
 var total = 0;
 var drawn = '';
@@ -9,10 +9,6 @@ var goal = 0;
 
 var wins = 0;
 var games = 0;
-
-function b() {
-    document.getElementById('cat-container').style.display ='none';
-}
 
 
 function startBlackjack() {
@@ -152,7 +148,6 @@ function generateCard(i) {
 
     switch (card) {
         case 1:
-            draw = 'an ace';
             drawn += 'A';
             if ((total + 11) > 21)
                 total += 1;
@@ -162,22 +157,18 @@ function generateCard(i) {
             }
             break;
         case 11:
-            draw = 'a jack';
             drawn += 'J';
             total += 10;
             break;
         case 12:
-            draw = 'a queen';
             drawn += 'Q';
             total += 10;
             break;
         case 13:
-            draw = 'a king';
             drawn += 'K';
             total += 10;
             break;
         default:
-            draw = 'a ' + card;
             drawn += card;
             total += card;
     }

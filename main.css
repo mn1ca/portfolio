@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* { box-sizing: border-box; }
+
+:root {
+    --red: #c1331c;
+    --bg: #fceadc;
+
+    --type1: 'Kosugi Maru';
+    --type2: 'League Spartan';
+}
+
+body {
+   background-color:var(--bg);
+
+    /**font defaults**/
+    font-family: var(--type1);
+    font-size: 18px;
+    color: var(--red);
+    overflow: auto;
+
+    cursor: url('/img/cursor/fish.png'), pointer;
+}
+
+b {
+    font-size: 80%;
+    font-weight: 1000;
+    font-family: var(--type1);
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a {
+    color: var(--red);
+    text-decoration: none;
+
+    cursor:  url('/img/cursor/fish2.png'), pointer;
+}
+
+a[href*="//"]:not([href*="https://mn1ca.fish"]) {
+    text-decoration: underline;
+}
+
+img {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+::selection {
+    background-color: #fcc2b8;
+}
+
+#wrapper {
+    width: 100%;
+
+    text-align: center;
+    align-items: flex-start;
+}
+
+/* ---- MENU ---- */
+
+.menu {
+    width: 100%;
+
+    position: static;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 5;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 125px;
+    padding: 0 7.5%;
+    margin-bottom: 50px;
+
+    font-size: 20px;
+
+    background-color: var(--bg);
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.menu a:hover {
+    font-weight: 1000;
+}
+
+#menu-text {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 40%;
+
+    vertical-align: bottom;
+}
+
+#menu-img {
+    width: 150px;
+    content: url('/img/mn1ca.png');
+}
+
+#menu-img:hover {
+    filter: brightness(.85);
+}
+
+
+/* ---- GRID ---- */
+
+.grid {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}

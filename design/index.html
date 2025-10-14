@@ -1,51 +1,45 @@
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>mn1ca</title>
-        <link href="../css/design.css" rel="stylesheet" type="text/css" media="all">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta charset='UTF-8'>
+        <title>design • mn1ca</title>
+        <link href='/main.css' rel='stylesheet' type='text/css' media='all'>
+        <link href='./design.css' rel='stylesheet' type='text/css' media='all'>
 
         <!-- masonry gallery imports -->
-        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+        <script src='https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js'></script>
+        <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
 
         <!-- load menu -->
-        <script type='module' src='../script/menu.js'></script>
+        <script type='module' src='/script/menu.js'></script>
 
         <!-- load gallery -->
-        <script type='module' src='../script/masonry.js'></script>
+        <script type='module' src='/script/masonry.js'></script>
 
         <!-- favicon -->
-        <link rel="icon" type="image/x-icon" href="../img/site/favicon.png">
+        <link rel='icon' type='image/x-icon' href='/img/favicon.png'>
 
     </head>
 
     <body>
 
-        <div id='menu-design' style='position: static'></div>
+        <div class='menu' id='design-menu'></div>
 
-        <div class="grid">
+        <div class='grid'>
 
-            <a href='./care.html'><div class='grid-item'>
-                <img src='../img/design/care/cover.png'>
+            <a href='./care'><div class='grid-item'>
+                <img src='./care/img/cover.png'>
                 <div class='title'>
-                    <img src='../img/design/care/logo.png'><br>graphic design
+                    <img src='./care/img/logo.png'><br>graphic design
                 </div>
             </div></a>
 
             <div class='grid-item'>
-                <img src='../img/design/decibels/cover.png'>
+                <img src='./decibels/cover.png'>
                 <div class='title'>
                     <b style='text-transform: uppercase'>decibels</b> web game
                 </div>
             </div>
-
-        </div>
-
-        <div id='zoom'>
-            <div id='content'></div>
-            <div id='closeout' onclick='document.getElementById("zoom").style.display = "none"; document.body.style.overflow = "auto"'></div>
-            <div id='shadow' onclick='document.getElementById("zoom").style.display = "none"; document.body.style.overflow = "auto"'></div>
         </div>
 
     </body>

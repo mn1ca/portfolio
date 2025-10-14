@@ -1,31 +1,35 @@
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>mn1ca</title>
-        <link href="../css/illust.css" rel="stylesheet" type="text/css" media="all">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta charset='UTF-8'>
+        <title>illust • mn1ca</title>
+
+        <!-- css -->
+        <link href='/main.css' rel='stylesheet' type='text/css' media='all'>
+        <link href='../illust.css' rel='stylesheet' type='text/css' media='all'>
 
         <!-- masonry gallery imports -->
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
         <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
         <!-- load menu -->
-        <script type='module' src='../script/menu.js'></script>
+        <script type='module' src='/script/menu.js'></script>
 
         <!-- load gallery -->
-        <script type='module' src='../script/gallery.js'></script>
+        <script type='module' src='../script/illust.js'></script>
+        <script type='module' src='/script/masonry.js'></script>
 
         <!-- favicon -->
-        <link rel="icon" type="image/x-icon" href="../img/site/favicon.png">
+        <link rel="icon" type="image/x-icon" href="/img/favicon.png">
 
     </head>
 
-    <div id='working-year' style='display: none'>2024</div>
+    <div id='working-year' style='display: none'>2023</div>
     <div id='working-type' style='display: none'>illust</div>
 
     <body>
 
-        <div id='menu-illust'></div>
+        <div class='menu' id='illust-menu'></div>
 
         <div class="grid"></div>
 

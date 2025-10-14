@@ -5,48 +5,6 @@
     --red: #c1331c;
     --brown: #6b220d;
     --bg: #fceadc;
-
-    --body: 'League Spartan';
-}
-
-* { box-sizing: border-box; }
-
-body {
-    background-color:var(--bg);
-
-    font-family: Kosugi Maru;
-    font-size: 16px;
-    font-weight: 450;
-    color: var(--red);
-    overflow-y: scroll;
-
-    cursor: url('../img/site/cursor/fish.png'), pointer;
-}
-
-b {
-    font-size: 85%;
-    font-weight: 1000;
-    font-family: Kosugi Maru;
-
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-}
-
-a {
-    color: var(--red);
-    text-decoration: none;
-
-    cursor:  url('../img/site/cursor/fish2.png'), pointer;
-}
-
-a[href*="//"]:not([href*="https://mn1ca.neocities.org"]) {
-    text-decoration: underline;
-}
-
-a:hover {
-    font-weight: 600;
-    cursor: url('../img/site/cursor/fish2.png'), pointer;
 }
 
 h1 {
@@ -69,76 +27,10 @@ h2 {
     user-select: none; /* Standard syntax */
 }
 
-
-img {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+#back:hover {
+    font-weight: 1000;
 }
 
-::selection {
-    background-color: #fcc2b8;
-}
-
-/* ---- MENU ---- */
-
-#menu-design {
-    width: 100%;
-
-    position: fixed;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    z-index: 5;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    height: 125px;
-    padding: 0 7.5%;
-    margin-bottom: 50px;
-
-    font-size: 20px;
-
-    background-color: var(--bg);
-
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-}
-
-#menu-text {
-    display: inline-flex;
-    justify-content: space-between;
-    width: 40%;
-
-    vertical-align: bottom;
-}
-
-#menu-img {
-    width: 150px;
-    content: url('../img/site/mn1ca.png');
-}
-
-#menu-img:hover {
-    filter: brightness(.85);
-}
-
-
-/* ---- GRID ---- */
-
-.grid {
-    margin: 0 auto;
-    width: 90%;
-}
-
-/* clearfix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
 
 /* ---- grid-item ---- */
 
@@ -147,7 +39,6 @@ img {
     float: left;
     width: 50%;
     padding: 10px;
-
 }
 
 .grid-item:hover {
@@ -174,6 +65,10 @@ img {
 
     text-align: center;
     line-height: 1;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .title img {
@@ -195,7 +90,7 @@ img {
 
     padding: 20px 10px;
 
-    font-family: var(--body);
+    font-family: var(--type2);
     font-weight: 350;
     font-size: 18px;
 

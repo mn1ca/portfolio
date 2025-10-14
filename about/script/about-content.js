@@ -1,4 +1,4 @@
-import data from './logs/about.json' with { type: 'json' };
+import data from './about.json' with { type: 'json' };
 
 document.addEventListener('DOMContentLoaded', load);
 
@@ -19,7 +19,7 @@ function buttons() {
 
         const newButton = document.createElement('span');
         newButton.innerHTML = `<a href='${buttons[i].link}' target='_blank' style='text-decoration: none'>
-                    <img src='../img/buttons/${buttons[i].img}' style='image-rendering: pixelated; width: 88px;'></a>`
+                    <img src='./img/buttons/${buttons[i].img}' style='image-rendering: pixelated; width: 88px;'></a>`
         display.appendChild(newButton);
     }
 

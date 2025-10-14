@@ -1,51 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
-
-:root {
-    --red: #c1331c;
-    --bg: #fceadc;
-}
-
-* { box-sizing: border-box; }
-
-body {
-    background-color:var(--bg);
-
-    font-family: Kosugi Maru;
-    font-size: 16px;
-    font-weight: 450;
-    color: var(--red);
-    overflow-y: scroll;
-
-    cursor: url('../img/site/cursor/fish.png'), pointer;
-}
-
-b {
-    font-size: 85%;
-    font-weight: 1000;
-    font-family: Kosugi Maru;
-
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-}
-
-a {
-    color: var(--red);
-    text-decoration: none;
-
-    cursor:  url('../img/site/cursor/fish2.png'), pointer;
-}
-
-a[href*="//"]:not([href*="https://mn1ca.neocities.org"]) {
-    text-decoration: underline;
-}
-
-a:hover {
-    font-weight: 600;
-    cursor: url('../img/site/cursor/fish2.png'), pointer;
-}
-
 h1 {
     font-size: 35px;
     font-family: "Kosugi Maru";
@@ -57,62 +9,11 @@ h1 {
 }
 
 
-img {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-}
-
-::selection {
-    background-color: #fcc2b8;
-}
-
-/* ---- MENU ---- */
-
-#menu-illust {
-    width: 100%;
-
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    z-index: 5;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    height: 125px;
-    padding: 0 7.5%;
-    margin-bottom: 50px;
-
-    font-size: 20px;
-
-    background-color: var(--bg);
-
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-}
-
-#menu-text {
-    display: inline-flex;
-    justify-content: space-between;
-    width: 40%;
-}
-
-#menu-img {
-    width: 150px;
-    content: url('../img/site/mn1ca.png');
-}
-
-#menu-img:hover {
-    filter: brightness(.85);
-}
 
 /* ---- DROPDOWN (menu) ---- */
 summary {
     list-style: none;
-    cursor: url('../img/site/cursor/fish2.png'), pointer;
+    cursor: url('/img/cursor/fish2.png'), pointer;
 }
 
 summary:hover {
@@ -150,21 +51,6 @@ summary:hover {
     background-color: #fcc2b8;
 }
 
-
-/* ---- GRID ---- */
-
-.grid {
-    margin: 0 auto;
-    width: 90%;
-}
-
-/* clearfix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
 /* ---- grid-item ---- */
 
 .grid-item {
@@ -179,7 +65,7 @@ summary:hover {
     transform: scale(1.01);
     transition-duration: 0.25s;
 
-    cursor: url('../img/site/cursor/fish2.png'), pointer;
+    cursor: url('/img/cursor/fish2.png'), pointer;
 }
 
 .grid-item img {
@@ -325,7 +211,7 @@ summary:hover {
 
 .dir:hover {
     font-weight: 1000;
-    cursor: url('../img/site/cursor/fish2.png');
+    cursor: url('/img/cursor/fish2.png');
 }
 
 #prev {
@@ -532,7 +418,7 @@ summary:hover {
     }
 
     #closeout:hover {
-        cursor: url('../img/site/cursor/fish2.png'), pointer;
+        cursor: url('/img/cursor/fish2.png'), pointer;
     }
 
     #prev {
