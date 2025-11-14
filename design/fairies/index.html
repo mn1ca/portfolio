@@ -1,0 +1,374 @@
+<html>
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta charset='UTF-8'>
+        <title>design • mn1ca</title>
+
+        <!-- css -->
+        <link href='/main.css' rel='stylesheet' type='text/css' media='all'>
+        <link href='/design/design.css' rel='stylesheet' type='text/css' media='all'>
+        <link href='/design/fairies/fairies.css' rel='stylesheet' type='text/css' media='all'>
+
+        <!-- load menu -->
+        <script type='module' src='/script/menu.js'></script>
+
+        <!-- favicon -->
+        <link rel='icon' type='image/x-icon' href='/img/favicon.png'>
+
+    </head>
+
+    <body>
+        <div class='menu' id='design-menu' style='position: fixed'></div>
+
+        <div id='branches'>
+            <div id='left-branch' class='branch'>
+            </div>
+            <div id='right-branch' class='branch'></div>
+        </div>
+
+        <div id='back-arrow'><a href='/design'>←</a><br>go back</div>
+
+
+        <div id='wrapper' style='padding: 125px 0px; margin-top: 30px'>
+            <section style='height: 100px'></section>
+
+            <section id='title-section'>
+            <h1>Fairies: <span style='font-size: 80%'><br>A project recreation of Pixie Hollow Online</span></h1>
+            <div id='desc-info'>
+                <h2>time&nbsp;&nbsp;</h2>2025
+                <br>
+                <h2>type&nbsp;&nbsp;</h2>web
+                <br>
+                <h2>tools&nbsp;</h2>JavaScript; Procreate, Adobe Illustrator
+            </div>
+            </section>
+
+            <section id='links'>
+                <a href='https://fairies.mn1ca.fish' target='_blank'>live site</a>
+                <br><span style='margin-left:-10px'>-</span><br>
+                <a href='https://github.com/mn1ca/fairies' target='_blank'>github</a>
+            </section>
+
+
+
+        <section id='intro-section'>
+        <div class='title-text'>Introduction</div>
+
+            <p>When I was looking up how to implement repulsion physics for items to move around in response to the cursor, the code I found interested me greatly:</p>
+
+            <div class='display'>
+                <div class='display-half'>
+                    <b style='margin-bottom: 2px'>(hover over the letters!)</b> <br>
+                    <div id='blobs'>
+                        <div class='blob'>m</div>
+                        <div class='blob'>n</div>
+                        <div class='blob'>1</div>
+                        <div class='blob'>c</div>
+                        <div class='blob'>a</div>
+                    </div>
+
+
+                </div>
+
+                <div class='display-half'>
+                    <div class='code-box'>
+                        <p>
+                        const rect = item.getBoundingClientRect();<br>
+                        const itemX = rect.left + rect.width / 2;<br>
+                        const itemY = rect.top + rect.height / 2;<br>
+                        <br>
+                        const deltaX = e.clientX - itemX;<br>
+                        const deltaY = e.clientY - itemY;<br>
+                        <br>
+                        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);<br>
+                        <br>
+                        const repulsionRadius = 150;<br>
+                        const repulsionStrength = 10;<br>
+                        <br>
+                        if (distance &lt; repulsionRadius) {<br>
+                            <br>
+                            // Calculate the avoidance vector<br>
+                            const angle = Math.atan2(deltaY, deltaX);<br>
+                            const avoidDistance = repulsionStrength * (1 - distance / repulsionRadius);<br>
+                            const moveX = -Math.cos(angle) * avoidDistance * .5;<br>
+                            const moveY = -Math.sin(angle) * avoidDistance;<br>
+                            <br>
+                            // Apply the transform to the menu item
+                            item.style.transform = `translate(${moveX}px, ${moveY}px)`;<br>
+                            item.style.transition = `transform 0s ease-out`;<br>
+                        } else {<br>
+                            item.style.transform = `translate(0, 0)`;<br>
+                            item.style.transition = `transform 0.5s ease-out`;<br>
+                        }
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <p>The idea of being able to spirit a div around the page reminded me a lot of in-game character movement, and specifically the mechanics of <a href='https://en.wikipedia.org/wiki/Pixie_Hollow_(video_game)' target='_blank'>Pixie Hollow Online</a>, a game I was horrifically obsessed with from the ages of about 6 to 9, which was how old I was when it shut down on September 19, 2013. I had school that day, but my mother let me log on to say goodbye before we left, and I can still remember being particularly devastated in class watching the clock strike 12. In the months afterwards, I made a number of flyers for the cause.
+            </p>
+
+            <div class='img-container' style='width: 80%; margin-bottom: 5px'>
+                <img src='./img/protest.png'>
+            </div>
+            <b>one of my first forays into graphic design ...</b>
+
+            <p style='margin-top: 25px'>Seeing the code — and being reminded of the game — made me wonder if I could at least redo part of it myself. I decided to start small-scale, with two main features: movement/exploration around a single map, and character customization.</p>
+
+        </section>
+
+        <section>
+        <div class='title-text'>Movement testing</div>
+            <p>I started with movement first, just to see if it would really work before I committed time to making everything.</p>
+            <p>From observing footage of the old game, I noticed the main rule of player movement around the space was to shift camera focus if the player moved a large distance, and to keep it stable if the movement was small.</p>
+            <p>I decided the best way to accomplish this was to define an invisible “bounding box.” Clicks within the box would be considered a small movement, and would be handled by only moving the character; clicks outside would be handled by translating the background so that the clicked position was the new center of the screen.</p>
+
+            <div class='img-container'>
+             <img src='./img/demo.gif'>
+            </div>
+
+            <p>After that was a ton of <span class='capital'>XY</span>-plane calculation and trial-and-error, as I figured out how to account for things like map edges and overshoot, when both the background and character were moving. In other words, there was a lot of head-scratching.</p>
+        </section>
+
+        <section>
+            <div class='title-text'>Art</div>
+            <div class='display'>
+            <p class='display-half'>The background paintover took much longer than I expected, but I was pretty pleased with the final results, despite my suffering. Unlike normal illustrations, where it’s recommended not to take so much time zooming in on the fine details, the map would only be viewed at close-up proportions, so I did my best to make it look good, even if it meant a lot (!!!) of painting.</p>
+
+            <div class='display-half'>
+                <b style='margin-left: -15px'>(!) Status update</b>
+            <div class='status'>
+                <div class='status-title'> <a href='https://status.cafe/users/mn1ca' target='_blank'>mn1ca</a> 🌱 <span id='time'></span></div>
+                <p>i think i may die if i have to draw another maple leaf</p>
+            </div>
+
+            </div>
+            </div>
+
+            <div class='img-container'>
+             <img src='./img/background.png'>
+            </div>
+
+            <p>Even then, the hardest part of illustration, by far, was the character art. I decided to keep the customization options limited, for time and creativity constraints, but even 3-4 options for each category ends up being a lot of drawing! It took a lot of tiny adjusting and repainting to get the parts to align with each other.</p>
+
+            <div class='display'>
+                <p class='display-half'>After the character art was finalized, I moved on to color variations. I made a few presets for the hair and skin, which I felt required more finicking with the individual values, but for the clothing and eye color, I decided to just make them widely changeable using built-in <span class='capital'>CSS</span> filters for hue, saturation, and brightness.</p>
+
+            <div class='display-half'>
+
+                <div class='img-container' style='border: none'>
+                    <img src='./img/colors.png'>
+                </div>
+                <b>color preset spritesheet</b>
+            </div>
+            </div>
+
+            <p>Last up were the <span class='capital'>UI</span> components, including the screen frame, clickable journal and music icons, and open journal background. I did cheat a little here — I borrowed the color swatch orb for the sit icon and slider handles. In fact, in an act of incredible <s>laziness</s> economy, I also made it the site favicon!</p>
+
+            <div class='img-container'>
+                <img src='./img/ui.png'>
+            </div>
+
+        </section>
+
+        <section>
+            <div class='title-text'>Putting it together</div>
+
+            <div class='display'>
+
+
+                <div class='display-half'>
+                    <p>With everything drawn up, it was time to put them on the site. The background was split into two parts: the main maple tree and the blurred forest background (back-background?), which would allow for a neat little parallax effect. This was really simple to implement: I copied the distance the main background traveled and halved it.</p>
+                    <div class='code-box' style='height: 105px; overflow-y: auto'>
+                        <p>
+                        background.style.transform = `translate(${totalX}px, ${totalY}px)`;<br>
+                        parallax.style.transform = `translateY(${totalY / 2}px)`;
+                        </p>
+                    </div>
+                </div>
+
+                <div class='display-half'>
+                    <div class='img-container'>
+                        <img src='./img/backgrounds.png'>
+                    </div>
+                </div>
+
+            </div>
+            <p>Programming the icon functionality in went well, too. I did struggle a little with the music: apparently, modern browsers block autoplay, so I had to improvise a clickable “enter” button for the loader to go away (and the music to start!).</p>
+            <p>Working on the character involved exporting all the different parts into spritesheets. Though probably, definitely, not the most efficient method, I decided to just set identical dimensions for everything. This way, I could layer each piece directly above each other without having to make any manual adjustments.</p>
+
+                <div id='layers'>
+                    <div class='sample-layer' id='layer0'></div>
+                    <div class='sample-layer' id='layer1'></div>
+                    <div class='sample-layer' id='layer2'></div>
+                    <div class='sample-layer' id='layer3'></div>
+                    <div class='sample-layer' id='layer4'></div>
+                    <div class='sample-layer' id='layer5'></div>
+                </div>
+
+            <p>With the sprites done, it was time to move on to the dress-up component. I’ll just say it — the wardrobe <span class='capital'>UI</span> is largely text- and <span class='capital'>SVG</span>-based because I didn’t want to draw anymore. </p>
+
+
+            <div class='img-container'>
+                <img src='./img/wardrobe.png'>
+            </div>
+
+            <p>To compensate for my laziness, I came up with a preview feature for each option, so hovering over a choice lets you view it instantly on your character. This code, which added a mouseover and mouseout function to each customization option, ended up being quite tediously repetitive, so I simplified it with a couple of for loops — not too complex, but the logic behind packing a function and its parameters as variables took a little researching to wrap my head around. </p>
+
+            <div class='display'>
+                <div class='display-half'>
+                <div class='img-container'>
+                    <img src='./img/code/2.png'>
+                </div>
+                <b>broke</b>
+                </div>
+                <div class='display-half'>
+                <div class='img-container'>
+                    <img src='./img/code/1.png'>
+                </div>
+                <b>woke!</b>
+                </div>
+            </div>
+
+            <p>And suddenly I was done!</p>
+        </section>
+
+        <section>
+        <div class='title-text'>Final notes</div>
+        <p>
+        While working on this project, I came up with a few features I’d like to add in the future:
+        </p>
+            <ul>
+                <li>Sub-rooms with minigames</li>
+                <li>Map changes, depending on talent choice (<span class='capital'>ex.</span> animals appearing for an animal-talent)</li>
+                <li>More customization options</li>
+                <li>Cookies to save customization data</li>
+            </ul>
+        <p>And, while we’re in the bullet point format, some notes I couldn’t fit into the write up:</p>
+            <ul>
+                <li>While I was working on this project, <a href='https://itsoffbrand.com' target='_blank'><span class='capital'>Off+Brand</span>’s</a> work on <a href='https://landonorris.com' target='_blank'>Lando Norris’ website</a> went semi-viral on Twitter. One feature I thought went underappreciated in the discourse was that typing “<span class='capital'>disco</span>” into the keyboard would change components on the site, which reminded me a lot of the Konami code. I implemented something similar; I’ll avoid giving it away here, but you can find a hint for it when changing your hairstyle (or just digging through the source code!).</li>
+                <li>The clothes hanger <span class='capital'>SVG</span> I used for the wardrobe tab is actually supposed to be locked behind a subscription. I was desperately searching for alternatives, but, finding none, resigned myself to the lowly free shirt <span class='capital'>SVG</span>. You can imagine my endless delight when I realized that whoever did the embed for the shirt icon must have messed it up — and switched it with the hanger!</li>
+            </ul>
+
+            <p>I ended up learning a lot from this project, particularly in regards to the scope of JavaScript functionality. Even on this write-up page, I’m still learning — the character parts expanding on scroll, in particular, took hours to wrangle. Though very tiring and sometimes tedious, it’s very exciting seeing all my different skillsets in art, design, and programming come together in the process of website-making, especially when it’s as self-indulgent as this project was.</p>
+        </section>
+
+        </div>
+
+        <script>
+            // Reset scroll to top on reload
+            window.onbeforeunload = () => {window.scrollTo(0, 0);}
+
+            // Movement w/ mouse repulsion
+            const items = document.querySelectorAll('.blob');
+            const container = document.getElementById('blobs');
+            container.addEventListener('mousemove', (e) => {
+
+            items.forEach((item) => {
+                const rect = item.getBoundingClientRect();
+                const itemX = rect.left + rect.width / 2;
+                const itemY = rect.top + rect.height / 2;
+
+                const deltaX = e.clientX - itemX;
+                const deltaY = e.clientY - itemY;
+
+                const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+                const repulsionRadius = 100;
+                const repulsionStrength = 50;
+
+                if (distance < repulsionRadius) {
+
+                    // Calculate the avoidance vector
+                    const angle = Math.atan2(deltaY, deltaX);
+                    const avoidDistance = repulsionStrength * (1 - distance / repulsionRadius);
+                    const moveX = -Math.cos(angle) * avoidDistance * .5;
+                    const moveY = -Math.sin(angle) * avoidDistance;
+
+                    // Apply the transform to the menu item
+                    item.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                    item.style.transition = `transform 0s ease-out`;
+                } else {
+                    item.style.transform = `translate(0, 0)`;
+                    item.style.transition = `transform 0.5s ease-out`;
+                }
+            });
+        });
+
+
+            // Date for mock status
+            window.onload = () => {
+
+                const now = new Date();
+                const pastDate = new Date('2025-10-08T08:23:41+00:00');
+                const diffTime = Math.abs(now.getTime() - pastDate.getTime());
+                const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+                document.getElementById('time').innerHTML = `${diffDays} days ago`;
+            }
+
+            // Animate layers on scroll trigger
+            function scrollTrigger(options) {
+                let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    for (let i = 0; i < 6; i++) {
+                        document.getElementById(`layer${i}`).style.left = `${i * 20}%`;
+                    }
+
+                  } else {
+                    for (let i = 0; i < 6; i++) {
+                        document.getElementById(`layer${i}`).style.left = `50%`;
+                    }
+                  }
+                })
+              }, options) // Passing the options object to the observer
+              observer.observe(document.getElementById('layers'));
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                scrollTrigger({rootMargin: '-300px'})
+            });
+
+            // Move branches on scroll
+            window.addEventListener('scroll', () => {
+
+                const branches = document.getElementById('branches');
+                const animationDistance = window.innerHeight * 3;
+
+                const offset = 150;
+                const start = branches.offsetTop - offset;
+                const end = start + animationDistance;
+
+                const y = window.scrollY;
+
+                if (y >= start && y <= end) {
+
+                    branches.classList.add('fixed');
+
+                    // Progress: 0 -> 1
+                    let progress = (y - start) / animationDistance * 5;
+                    progress = Math.min(Math.max(progress, 0), 1);
+
+                    const left = document.getElementById('left-branch');
+                    const right = document.getElementById('right-branch');
+                    const back = document.getElementById('back-arrow');
+
+                    const width = Math.max(40, (1 - progress) * 62);
+                    left.style.width = `${width}vw`;
+                    right.style.width = `${width}vw`;
+
+                    const distance = Math.max(-40, ((1 - progress) * 20) - 20);
+                    left.style.left = `${distance}vw`;
+                    right.style.left = `${100 -distance / 1.25}vw`;
+                    back.style.left = `${distance}vw`;
+                }
+            });
+
+        </script>
+
+
+    </body>
+
+</html>
+

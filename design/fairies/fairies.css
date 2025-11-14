@@ -1,0 +1,376 @@
+a:not([href*="/"]) {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.title-text {
+    width: 110%;
+
+    border-top: 1px solid var(--red);
+    text-align: left;
+    margin: 15% 0px 5px;
+    padding-top: 10px;
+
+    line-height: 1;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 1000;
+}
+
+li {
+    text-align: left;
+    font-family: League Spartan;
+    padding-left: 20px;
+    margin: 10px 0px;
+    line-height: 1.35;
+    font-size: 15px;
+}
+
+#branches {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 150px;
+    left: 0;
+
+    z-index: 200;
+    overflow-x: hidden;
+}
+
+#branches.fixed {
+    position: fixed;
+    top: 150px;
+
+    pointer-events: none;
+}
+
+.branch {
+    content: url('./img/branch.png');
+    width: 60vw;
+
+    transform-origin: top left;
+}
+
+#left-branch {
+    position: absolute;
+    left: -5vw;
+    top: 150px;
+}
+
+#right-branch {
+    position: absolute;
+
+    left: 100vw;
+    transform: scaleX(-1);
+}
+
+.shiny {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+    background-image: radial-gradient(circle at center, rgba(255, 175, 0, .5), rgba(0,0,0,0), rgba(0,0,0,0));
+
+    animation: fade-in-out 4s infinite alternate ease-in-out;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#back-arrow {
+    position: fixed;
+    bottom: 80px;
+
+    width: 120px;
+    height: 120px;
+
+    line-height: 0.5;
+
+    text-align: center;
+    padding-top: 30px;
+
+    pointer-events: auto;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#back-arrow a {
+    font-size: 50px;
+}
+
+#back-arrow a:hover {
+    font-weight: 1000;
+}
+
+#title-section {
+    font-size: 14px;
+    width: fit-content;
+    width: 350px;
+    margin: auto;
+    text-align: left;
+
+    padding: 0px;
+}
+
+#links {
+    padding: 25px 0px;
+    width: 100%;
+    color: var(--red);
+    line-height: 1.5;
+    font-weight: 1000;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#links a::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background-color: var(--red);
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-external-link'%3E%3Cpath d='M15 3h6v6'/%3E%3Cpath d='M10 14 21 3'/%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' %3E%3Cpath d='M15 3h6v6'/%3E%3Cpath d='M10 14 21 3'/%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E");
+
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+
+    margin-left: 5px;
+}
+
+#table-of-contents {
+
+    font-size: 14px;
+    font-family: League Spartan;
+
+    width: fit-content;
+    min-width: 350px;
+    margin: auto;
+    text-align: left;
+
+    padding: 0px;
+
+    border-radius: 10px;
+    border: 1px dashed var(--red);
+}
+
+#table-of-contents ol li {
+    margin-bottom: 5px;
+    padding-left: 5px;
+
+}
+
+#table-of-contents ol li::marker {
+    font-size: 75%;
+    font-weight: 1000;
+    font-family: Kosugi Maru;
+
+    text-align: left;
+
+}
+
+
+section {
+    padding: 0 20%;
+}
+
+p {
+    text-align: left;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: League Spartan;
+
+    margin: 15px 0px;
+}
+
+.img-container {
+    margin: 15px auto;
+    width: 80%;
+
+    border: 1px dashed #c1331c;
+    border-radius:10px;
+}
+
+.img-container img {
+    width: 100%;
+    border-radius:10px;
+}
+
+.display {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.display-half {
+    width: 50%;
+}
+
+.status {
+    width: 90%;
+    height: 125px;
+
+    text-align: left;
+
+    border: 1px dashed var(--red);
+    border-radius:10px;
+    position: relative;
+    margin: 10px auto;
+    padding: 20px;
+    box-shadow:12px 8px #deaea6;
+
+    font-family: League Spartan;
+}
+
+.status-title {
+    font-size: 90%;
+    font-weight: 600;
+}
+
+ .status p {
+     line-height: 1.25;
+ }
+
+#blobs {
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.blob {
+    font-size: 60px;
+}
+
+ .code-box {
+    width: 100%;
+    height: 150px;
+
+    overflow-y: scroll;
+    padding: 10px;
+    margin: 5px auto;
+
+    border: 1px dashed #c1331c;
+    border-radius: 10px;
+ }
+
+.code-box p {
+    font-family: Kosugi Maru;
+    font-size: 12px;
+    text-align: left;
+    line-height: 1;
+    opacity: .5;
+}
+
+ #layers {
+     width: 100%;
+     height: 280px;
+
+     position: relative;
+     margin: auto;
+ }
+
+ .sample-layer {
+     width: 250px;
+     height: 394px;
+
+     border: 2px dashed var(--red);
+     border-radius: 10px;
+     box-sizing: content-box;
+     position: absolute;
+     top: -75px;
+
+     transform: scale(.5) skewY(-5deg) translate(-100%);
+     background: url(./img/sample-layers.png) -10px 0;
+
+     left: 40%;
+     transition: left 1s ease-in-out;
+ }
+
+ #layer1 {
+     background: url(./img/sample-layers.png) -260px 0;
+ }
+
+ #layer2 {
+     background: url(./img/sample-layers.png) calc(-253px * 2) 0;
+ }
+
+ #layer3 {
+     z-index: 3;
+     background: url(./img/sample-layers.png) calc(-250px*3) 0;
+ }
+
+#layer4 {
+     z-index: 3;
+     background: url(./img/sample-layers.png) calc(-249.5px * 4) 0;
+ }
+
+#layer5 {
+     z-index: 3;
+     background: url(./img/sample-layers.png) calc(-248.5px * 5) 0;
+ }
+
+@media only screen and (max-width: 950px) {
+    .display {
+        display: inline-block;
+    }
+    .display-half {
+        width: 100%;
+    }
+
+    .img-container {
+        width: 100%;
+    }
+
+    #right-branch {
+        top: 75px;
+    }
+
+    #branches {
+        top: 50px;
+    }
+
+    #branches.fixed {
+        top: 30px;
+    }
+
+    .branch {
+        transform: scale(1.1) translate(-25%, -20%);
+    }
+
+    #right-branch {
+        transform: scaleX(-1) scale(1.6) translate(-25%, -15%);
+        top: 150px;
+    }
+
+    #back-arrow {
+        top: 90px;
+        transform: scale(.7) translate(-10%);
+
+        z-index: 200;
+    }
+
+    #blobs {
+        height: fit-content;
+    }
+
+}
