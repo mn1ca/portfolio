@@ -26,8 +26,6 @@
             <div id='right-branch' class='branch'></div>
         </div>
 
-        <div id='back-arrow'><a href='/design'>←</a><br>go back</div>
-
 
         <div id='wrapper'>
             <section style='height: 100px'></section>
@@ -49,8 +47,12 @@
                 <a href='https://github.com/mn1ca/fairies' target='_blank'>github</a>
             </section>
 
-
-
+        <div id='header-image'>
+            <img src='/design/fairies/img/summary.png' style='width: 75%'>
+            <a href='/design'><div id='clickable'></div></a>
+            <br>
+            <b>(click the sign to go back!)</b>
+        </div>
         <section id='intro-section'>
         <div class='title-text'>Introduction</div>
 
@@ -194,8 +196,8 @@
                 </div>
 
             </div>
-            <p>Programming the icon functionality in went well, too. I did struggle a little with the music: apparently, modern browsers block autoplay, so I had to improvise a clickable “enter” button for the loader to go away (and the music to start!).</p>
-            <p>Working on the character involved exporting all the different parts into spritesheets. Though probably, definitely, not the most efficient method, I decided to just set identical dimensions for everything. This way, I could layer each piece directly above each other without having to make any manual adjustments.</p>
+            <p>One problem I ran into was the music: apparently, modern browsers block autoplay, so I had to improvise a clickable “enter” button for the loader to go away (and the music to start!).</p>
+            <p>Other than that, working on the character involved exporting all the different parts into spritesheets. Though probably, definitely, not the most efficient method, I decided to just set identical dimensions for everything. This way, I could layer each piece directly above each other without having to make any manual adjustments.</p>
 
                 <div id='layers'>
                     <div class='sample-layer' id='layer0'></div>
@@ -236,7 +238,7 @@
         <section>
         <div class='title-text'>Final notes</div>
         <p>
-        While working on this project, I came up with a few features I’d like to add in the future:
+        I came up with a few features I’d like to add in the future:
         </p>
             <ul>
                 <li>Sub-rooms with minigames</li>
@@ -247,7 +249,7 @@
         <p>And, while we’re in the bullet point format, some notes I couldn’t fit into the write up:</p>
             <ul>
                 <li>While I was working on this project, <a href='https://itsoffbrand.com' target='_blank'><span class='capital'>Off+Brand</span>’s</a> work on <a href='https://landonorris.com' target='_blank'>Lando Norris’ website</a> went semi-viral on Twitter. One feature I thought went underappreciated in the discourse was that typing “<span class='capital'>disco</span>” into the keyboard would change components on the site, which reminded me a lot of the Konami code. I implemented something similar; I’ll avoid giving it away here, but you can find a hint for it when changing your hairstyle (or just digging through the source code!).</li>
-                <li>The clothes hanger <span class='capital'>SVG</span> I used for the wardrobe tab is actually supposed to be locked behind a subscription. I was desperately searching for alternatives, but, finding none, resigned myself to the lowly free shirt <span class='capital'>SVG</span>. You can imagine my endless delight when I realized that whoever did the embed for the shirt icon must have messed it up — and switched it with the hanger!</li>
+                <li>The clothes hanger <span class='capital'>SVG</span> I used for the wardrobe tab is actually supposed to be locked behind a subscription. I was desperately searching for alternatives, but, finding none, resigned myself to the lowly free shirt icon. You can imagine my endless delight when I realized that whoever did the embed for the shirt must have messed it up — and switched it with the hanger!</li>
             </ul>
 
             <p>I ended up learning a lot from this project, particularly in regards to the scope of JavaScript functionality. Even on this write-up page, I’m still learning — the character parts expanding on scroll, in particular, took hours to wrangle. Though very tiring and sometimes tedious, it’s very exciting seeing all my different skillsets in art, design, and programming come together in the process of website-making, especially when it’s as self-indulgent as this project was.</p>
@@ -355,7 +357,6 @@
 
                     const left = document.getElementById('left-branch');
                     const right = document.getElementById('right-branch');
-                    const back = document.getElementById('back-arrow');
 
                     const width = Math.max(40, (1 - progress) * 62);
                     left.style.width = `${width}vw`;
@@ -364,7 +365,6 @@
                     const distance = Math.max(-40, ((1 - progress) * 20) - 20);
                     left.style.left = `${distance}vw`;
                     right.style.left = `${100 -distance / 1.25}vw`;
-                    back.style.left = `${distance}vw`;
                 }
             });
 
