@@ -312,16 +312,18 @@ textarea {
 
     .innards {
         position: fixed;
-
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        transform: translateY(-50%);
 
         border: 1px solid var(--red);
         display: none;
 
         max-height: 60vh;
-        width: 60vw;
+        width: 90vw;
 
         background-color: var(--bg);
         padding: 30px;
