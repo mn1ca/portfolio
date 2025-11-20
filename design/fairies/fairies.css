@@ -1,3 +1,7 @@
+#wrapper {
+     padding: 15vh 0;
+}
+
 a:not([href*="/"]) {
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -35,6 +39,8 @@ li {
 
     z-index: 200;
     overflow-x: hidden;
+
+    pointer-events: none;
 }
 
 #branches.fixed {
@@ -154,7 +160,6 @@ li {
 
 }
 
-
 section {
     padding: 0 20%;
 }
@@ -258,6 +263,8 @@ p {
 
      position: relative;
      margin: auto;
+
+     overflow: hidden;
  }
 
  .sample-layer {
@@ -301,6 +308,15 @@ p {
  }
 
 @media only screen and (max-width: 950px) {
+
+    #wrapper {
+        padding-top: 150px;
+    }
+
+    section {
+        padding: 0 8%;
+    }
+
     .display {
         display: inline-block;
     }
@@ -317,27 +333,26 @@ p {
     }
 
     #branches {
-        top: 50px;
-    }
+        top: 20px;
+        position: absolute;
 
-    #branches.fixed {
-        top: 30px;
+        width: 100%;
+        overflow: hidden;
     }
 
     .branch {
-        transform: scale(1.1) translate(-25%, -20%);
+        transform: scale(.8) translate(-10%, -60%);
+        z-index: 1 !important;
     }
 
     #right-branch {
-        transform: scaleX(-1) scale(1.6) translate(-25%, -15%);
-        top: 150px;
+        transform: scaleX(-1) scale(.8) translateY(20%);
     }
 
     #back-arrow {
-        top: 90px;
-        transform: scale(.7) translate(-10%);
-
-        z-index: 200;
+        position: absolute;
+        top: 180px;
+        transform: scale(.7) translate(-40%);
     }
 
     #blobs {

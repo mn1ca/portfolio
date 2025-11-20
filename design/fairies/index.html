@@ -29,7 +29,7 @@
         <div id='back-arrow'><a href='/design'>←</a><br>go back</div>
 
 
-        <div id='wrapper' style='padding: 125px 0px; margin-top: 30px'>
+        <div id='wrapper'>
             <section style='height: 100px'></section>
 
             <section id='title-section'>
@@ -327,11 +327,14 @@
             }
 
             document.addEventListener('DOMContentLoaded', () => {
-                scrollTrigger({rootMargin: '-300px'})
+                scrollTrigger({rootMargin: '-300px', threshold:0.9})
             });
 
             // Move branches on scroll
             window.addEventListener('scroll', () => {
+                if (window.matchMedia('(max-width: 950px)').matches) {
+                    return;
+                }
 
                 const branches = document.getElementById('branches');
                 const animationDistance = window.innerHeight * 3;

@@ -290,41 +290,6 @@ summary:hover {
 
 @media only screen and (max-width: 950px) {
 
-    /* MENU */
-
-    #menu-illust {
-        width: 100%;
-        margin: auto;
-    }
-
-    #menu-text {
-        display: flex;
-        flex-direction: column;
-        text-align: right;
-    }
-
-     #menu-text > *:not(:last-child) {
-        margin-bottom: 5px; /* Adds 20px space below all children except the last one */
-    }
-
-    #dropdown {
-        display: flex;
-        flex-direction: column;
-
-        margin: 0px;
-        padding: 2px 0px;
-        width: 20%;
-        right: 6%;
-
-        border: 0px;
-
-        background-color: var(--bg);
-    }
-
-    .choice {
-        line-height: 25px;
-    }
-
     /* GRID */
 
     .grid-item {

@@ -109,7 +109,7 @@ img {
 #menu-text {
     display: inline-flex;
     justify-content: space-between;
-    width: 40%;
+    width: 30%;
 
     font-size: calc(14px + .75vh);
 
@@ -171,3 +171,45 @@ img {
   display: block;
   clear: both;
 }
+
+@media only screen and (max-width: 950px) {
+
+    /* MENU */
+
+    .menu {
+        height: auto;
+        padding: 10px 7.5%;
+    }
+
+    #menu-img {
+        margin-right: 3vw;
+    }
+
+    #menu-text {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+
+     #menu-text > *:not(:last-child) {
+        margin-bottom: 1px;
+    }
+
+    #dropdown {
+        display: flex;
+        flex-direction: column;
+
+        margin: 0px;
+        padding: 2px 0px;
+        width: 15%;
+        top: 2%;
+        right: 6%;
+
+        border: 0px !important;
+
+        background-color: var(--bg);
+    }
+
+    .choice {
+        line-height: 25px;
+    }
