@@ -1,7 +1,17 @@
+body {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 p {
     margin: 0px;
     line-height: 100%;
     text-align: justify;
+
+    -webkit-user-select: text;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 h1 {
