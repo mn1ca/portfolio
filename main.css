@@ -17,6 +17,7 @@ body {
     /**font defaults**/
     font-family: var(--type1);
     font-size: 18px;
+    line-height: 1.2;
     color: var(--red);
     overflow: auto;
 
@@ -44,6 +45,18 @@ a[href*="//"]:not([href*="https://mn1ca.fish"]) {
     text-decoration: underline;
 }
 
+br {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+hr {
+    border: 0px;
+    border-top: 1px solid var(--red);
+    width: 95%;
+}
+
 img {
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -68,7 +81,6 @@ img {
 
     position: static;
     left: 0px;
-    right: 0px;
     top: 0px;
     z-index: 5;
 
@@ -76,7 +88,8 @@ img {
     justify-content: space-between;
     align-items: center;
 
-    height: 125px;
+    min-height: 60px;
+    height: 15vh;
     padding: 0 7.5%;
     margin-bottom: 50px;
 
@@ -102,12 +115,44 @@ img {
 }
 
 #menu-img {
-    width: 150px;
+    height: 15vh;
+    min-height: 60px;
     content: url('/img/mn1ca.png');
 }
 
 #menu-img:hover {
     filter: brightness(.85);
+}
+
+
+#links {
+    padding: 25px 0px;
+    width: 100%;
+    color: var(--red);
+    font-family: var(--type1);
+    line-height: 1.5;
+    font-weight: 1000;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#links a::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background-color: var(--red);
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-external-link'%3E%3Cpath d='M15 3h6v6'/%3E%3Cpath d='M10 14 21 3'/%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' %3E%3Cpath d='M15 3h6v6'/%3E%3Cpath d='M10 14 21 3'/%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E");
+
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+
+    margin-left: 5px;
 }
 
 

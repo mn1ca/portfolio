@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta charset='UTF-8'>
+        <title>design • mn1ca</title>
+
+        <!-- css -->
+        <link href='/main.css' rel='stylesheet' type='text/css' media='all'>
+        <link href='/design/design.css' rel='stylesheet' type='text/css' media='all'>
+        <link rel='stylesheet' href='https://unpkg.com/flickity@2/dist/flickity.min.css'>
+
+        <!-- load menu -->
+        <script type='module' src='/script/menu.js'></script>
+
+        <!-- favicon -->
+        <link rel='icon' type='image/x-icon' href='/img/favicon.png'>
+
+        <style>
+            h3 {
+                display: inline;
+                line-height: 150%;
+                font-weight: 500;
+            }
+
+            .number {
+                font-weight: 1000;
+            }
+
+            hr {
+                margin: 25px 0px;
+            }
+
+            .hidden-subtext {
+                display: none;
+                font-size: 95%;
+                width: 95%;
+
+                margin-bottom: 15px;
+            }
+
+            #links {
+                padding: 0px 15px;
+            }
+
+            @media only screen and (max-width: 950px) {
+
+                h3 {
+                    font-size: 105%;
+                    font-weight: 500 !important;
+                }
+
+                .hidden-subtext {
+                    display: block !important;
+                    margin-left: 15px;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class='menu' id='design-menu'  style='position: fixed'></div>
+
+        <div id='side-desc'>
+            <div id='back'><a href='/design'>←</a></div>
+            <h1>Selina’s Room</h1>
+            <div id='desc-info'>
+                <h2>time&nbsp;&nbsp;</h2>2025 (one week)
+                <br>
+                <h2>type&nbsp;&nbsp;</h2>web
+                <br>
+                <h2>tools&nbsp;</h2>JavaScript; Procreate
+            </div>
+
+            <div id='links'>
+                <a href='https://ploscky.github.io/selinas-room' target='_blank'>live site</a><br>
+                <a href='https://github.com/ploscky/selinas-room' target='_blank'>github</a>
+            </div>
+
+            <p>I designed the portfolio site for my friend Selina, a computer science student. The main concept centers around a girl working in a room, with the things around her representing the pages of the site.</p>
+            <hr>
+            <div id='desc-1'>
+                <h2 class='number'>fig 1.</h2> <h3 id='title-1'>Desktop view</h3>
+                <span class='hidden-subtext' id='text-1'>Hovering over link buttons animates the background to focus over different parts of the room. The sprites also change slightly!</span>
+            </div>
+
+            <div id='desc-2'>
+                <h2 class='number'>fig 2.</h2> <h3 id='title-2'>Day / night mode</h3>
+                <span class='hidden-subtext' id='text-2'>The site has a toggle between day/night (or light / dark) mode, with a different background for the time of day. The default viewing mode is set based on the user's real time.</span>
+            </div>
+
+            <div id='desc-3'>
+                <h2 class='number'>fig 3.</h2> <h3 id='title-3'><span class='capital'>JSON</span> linking</h3>
+                <span class='hidden-subtext' id='text-3'>Content for the site is loaded in via a <span class='capital'>JSON</span> file, allowing edits to be made quickly and seamlessly.</span>
+            </div>
+
+        </div>
+
+        <div id='side-images'>
+            <div class='block' id='1'>
+            <video width="100%" height='auto' autoplay loop muted>
+                <source src="/design/selinas-room/img/site.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+            </div>
+
+            <div class='block' id='2'>
+                <img src='/design/selinas-room/img/day.png'>
+                <img src='/design/selinas-room/img/night.png'>
+            </div>
+            <div class='block' id='3'>
+                <img src='/design/selinas-room/img/json.png' style='width: 100%'>
+            </div>
+
+
+        </div>
+
+        <script>
+            function scrollTrigger(options) {
+                let elements = document.querySelectorAll('.block');
+                let observer = new IntersectionObserver((entries, observer) => {
+
+                    entries.forEach(entry => {
+
+                        // Disable for non-scrolling view
+                        if (window.matchMedia('(max-width: 950px)').matches) {
+                            return;
+                        }
+
+                        if (entry.isIntersecting) {
+                            document.getElementById(`title-${entry.target.id}`).style.fontWeight = 700;
+                            document.getElementById(`text-${entry.target.id}`).style.display = 'block';
+                        } else {
+                            document.getElementById(`title-${entry.target.id}`).style.fontWeight = 500;
+                            document.getElementById(`text-${entry.target.id}`).style.display = 'none';
+                        }
+                    })
+                }, options) // Passing the options object to the observer
+
+                elements.forEach(el => observer.observe(el));
+
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                scrollTrigger({rootMargin: '-80% 0px -90% 0px'})
+            });
+
+        </script>
+</body></html>
