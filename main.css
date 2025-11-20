@@ -111,6 +111,8 @@ img {
     justify-content: space-between;
     width: 40%;
 
+    font-size: calc(14px + .75vh);
+
     vertical-align: bottom;
 }
 

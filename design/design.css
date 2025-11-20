@@ -243,7 +243,7 @@ h2 {
     }
 
      #menu-text > *:not(:last-child) {
-        margin-bottom: 5px; /* Adds 20px space below all children except the last one */
+        margin-bottom: 1px;
     }
 
     #dropdown {
@@ -266,6 +266,7 @@ h2 {
         position: static;
         width: 100%;
         max-width: 100%;
+        height: auto;
 
         padding: 120px 20px 30px;
     }
