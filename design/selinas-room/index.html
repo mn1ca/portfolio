@@ -39,7 +39,7 @@
                 padding: 0px 15px;
             }
 
-            @media only screen and (max-width: 950px) {
+            @media only screen and (max-width: 950px), (max-aspect-ratio: 4/3) {
 
                 h3 {
                     font-size: 105%;
@@ -129,7 +129,7 @@
                     entries.forEach(entry => {
 
                         // Disable for non-scrolling view
-                        if (window.matchMedia('(max-width: 950px)').matches) {
+                        if (window.matchMedia('(max-width: 950px)').matches || window.matchMedia('(max-aspect-ratio: 4/3)').matches) {
                             return;
                         }
 
@@ -144,12 +144,7 @@
                 }, options) // Passing the options object to the observer
 
                 elements.forEach(el => observer.observe(el));
-
             }
-
-            window.addEventListener('scroll', () => {
-                 console.log(window.scrollY, 'hi');
-                });
 
             document.addEventListener('DOMContentLoaded', () => {
                 scrollTrigger({rootMargin: '-50% 0px -50% 0px'})
