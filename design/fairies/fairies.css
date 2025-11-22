@@ -371,4 +371,28 @@ p {
         height: fit-content;
     }
 
+    #layer0 {
+        left: 0%;
+    }
+
+    #layer1 {
+        left: 20%;
+    }
+
+    #layer2 {
+        left: 40%;
+    }
+
+    #layer3 {
+        left: 60%;
+    }
+
+    #layer4 {
+        left: 80%;
+    }
+
+    #layer5 {
+        left: 100%;
+    }
+
 }
